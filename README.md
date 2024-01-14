@@ -6,6 +6,8 @@ This is an official starter Turborepo.
 
 Run the following command:
 
+Make sure to have the Biome CLI installed.
+
 ```sh
 npx create-turbo@latest
 ```
@@ -29,8 +31,8 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 This Turborepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [Biome](https://biomejs.dev/) for code linting and formatting
+- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
 
 ### Build
 

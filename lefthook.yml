@@ -3,3 +3,8 @@ pre-commit:
     check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: pnpm dlx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+
+commit-msg:
+  commands: 
+    lint-commit-msg:
+      run: pnpm dlx commitlint --edit $1

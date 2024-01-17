@@ -1,6 +1,6 @@
 # Donna - a monorepo from the future 
 
-This is a starter template for a 2024 monorepo.
+This is an opinionated starter template for a 2024 monorepo.
 It aims to use blazingly fast and modern technology.
 
 ## Using this template 
@@ -29,12 +29,14 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+This monorepo has some additional tools already setup for you:
 
+- [Turborepo](https://turbo.build/) A high-performance build system / monorepo
+- [NextJS](https://nextjs.org/) A NextJS 14 App 
 - [Tailwind](https://tailwindcss.com/) Tailwind to style your app
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [Biome](https://biomejs.dev/) for code linting and formatting
-- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks
+- [Biome](https://biomejs.dev/) for code linting and formatting, build with Rust
+- [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks, build with Go
 
 ### Build
 

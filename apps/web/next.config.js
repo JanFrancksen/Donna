@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-	transpilePackages: [
-		"@repo/ui",
-		"@repo/tailwind-config",
-		"@repo/biome-config",
-	],
+	transpilePackages: ['@repo/ui', '@repo/tailwind-config'],
 };

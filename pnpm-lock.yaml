@@ -17,9 +17,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^18.4.4
         version: 18.4.4
-      '@repo/biome-config':
-        specifier: workspace:*
-        version: link:packages/biome-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
@@ -48,9 +45,6 @@ importers:
       '@biomejs/biome':
         specifier: 1.5.1
         version: 1.5.1
-      '@repo/biome-config':
-        specifier: workspace:*
-        version: link:../../packages/biome-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
@@ -88,9 +82,6 @@ importers:
       '@biomejs/biome':
         specifier: 1.5.1
         version: 1.5.1
-      '@repo/biome-config':
-        specifier: workspace:*
-        version: link:../../packages/biome-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
@@ -107,17 +98,8 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/biome-config:
-    devDependencies:
-      '@biomejs/biome':
-        specifier: 1.5.1
-        version: 1.5.1
-
   packages/tailwind-config:
     devDependencies:
-      '@repo/biome-config':
-        specifier: workspace:*
-        version: link:../biome-config
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.33)

@@ -8,7 +8,9 @@
 	},
 	"javascript": {
 		"formatter": {
+			"enabled": true,
 			"quoteStyle": "single",
+			"jsxQuoteStyle": "single",
 			"trailingComma": "es5"
 		}
 	},

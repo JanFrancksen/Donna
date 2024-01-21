@@ -37,6 +37,8 @@ This monorepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [Biome](https://biomejs.dev/) for code linting and formatting, build with Rust
 - [Lefthook](https://github.com/evilmartians/lefthook) for Git hooks, build with Go
+- [CVA] for easy component variants
+- [React-Aria-Components] for accessible headless components
 
 ### Build
 

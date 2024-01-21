@@ -1,6 +1,14 @@
-import { Button } from "@repo/ui/button";
-import Image from "next/image";
+import { AlertDialog } from '@repo/ui/AlertDialog';
+import { Button } from '@repo/ui/Button';
+import Image from 'next/image';
 
 export default function Page(): JSX.Element {
-	return <Button>Hallo dasd dasda a</Button>;
+	return (
+		<div>
+			<Button variant='primary'>Hallo</Button>
+			<AlertDialog title='test' actionLabel='dasd'>
+				asd
+			</AlertDialog>
+		</div>
+	);
 }

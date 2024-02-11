@@ -5,7 +5,7 @@ It aims to use blazingly fast and modern technology.
 
 ## Using this template 
 
-Clone this repo and run 
+Create a repo based on this template and run 
 
 ```sh
 pnpm install

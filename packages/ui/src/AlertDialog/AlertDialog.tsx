@@ -8,6 +8,7 @@ import {
 	Dialog,
 	DialogProps,
 	Heading,
+	Modal,
 } from 'react-aria-components';
 import { Button } from '../Button/Button';
 
@@ -52,33 +53,35 @@ export const AlertDialog: React.FC<AlertDialogProps> = ({
 	...props
 }) => {
 	return (
-		<Dialog
-			role='alertdialog'
-			className={alertDialogStyles({ variant, size })}
-			{...props}
-		>
-			{({ close }) => (
-				<>
-					<Heading
-						slot='title'
-						className='text-xl font-semibold leading-6 my-0'
-					>
-						{title}
-					</Heading>
-					<div className=''>
-						{variant === 'danger' ? 'dangericon' : 'warningicon'}
-					</div>
-					<p className='mt-3 text-slate-500 dark:text-zinc-400'>{children}</p>
-					<div className='mt-6 flex justify-end gap-2'>
-						<Button variant='secondary' onPress={close}>
-							{cancelLabel || 'Cancel'}
-						</Button>
-						<Button variant={variant} autoFocus onPress={() => {}}>
-							{actionLabel}
-						</Button>
-					</div>
-				</>
-			)}
-		</Dialog>
+		<Modal>
+			<Dialog
+				role='alertdialog'
+				className={alertDialogStyles({ variant, size })}
+				{...props}
+			>
+				{({ close }) => (
+					<>
+						<Heading
+							slot='title'
+							className='text-xl font-semibold leading-6 my-0'
+						>
+							{title}
+						</Heading>
+						<div className=''>
+							{variant === 'danger' ? 'dangericon' : 'warningicon'}
+						</div>
+						<p className='mt-3 text-slate-500 dark:text-zinc-400'>{children}</p>
+						<div className='mt-6 flex justify-end gap-2'>
+							<Button variant='secondary' onPress={close}>
+								{cancelLabel || 'Cancel'}
+							</Button>
+							<Button variant={variant} autoFocus onPress={() => {}}>
+								{actionLabel}
+							</Button>
+						</div>
+					</>
+				)}
+			</Dialog>
+		</Modal>
 	);
 };

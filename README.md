@@ -9,7 +9,7 @@ Create a repo based on this template and run
 
 ```sh
 bun install
-bun run --bun
+turbo dev
 ```
 
 Make sure to have the Biome CLI installed and your IDE Setup to format with Biome.
@@ -53,5 +53,5 @@ bun build
 To develop all apps and packages, run the following command:
 
 ```
-bun dev --bun
+turbo dev
 ```

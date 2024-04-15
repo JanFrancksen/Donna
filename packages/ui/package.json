@@ -3,10 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		"./Button": "./src/Button/Button.tsx",
-		"./Card": "./src/Card.tsx",
-		"./Code": "./src/Code.tsx",
-		"./AlertDialog": "./src/AlertDialog/AlertDialog.tsx"
+		"./Button": "./src/Button/Button.tsx"
 	},
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",

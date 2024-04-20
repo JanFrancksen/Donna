@@ -1,0 +1,23 @@
+{
+	"name": "@repo/validators",
+	"version": "0.0.0",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./src/index.ts"
+		}
+	},
+	"scripts": {
+		"lint": "eslint . --max-warnings 0",
+		"clean": "rm -rf .turbo node_modules"
+	},
+	"devDependencies": {
+		"@repo/typescript-config": "workspace:*",
+		"@turbo/gen": "^1.11.3",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"zod": "^3.22.4"
+	}
+}

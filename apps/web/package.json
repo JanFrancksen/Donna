@@ -13,7 +13,8 @@
 		"@repo/tailwind-config": "workspace:*",
 		"next": "^14.0.4",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"@repo/types": "workspace:*"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.1",

@@ -3,7 +3,15 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"nursery": {
+				"useSortedClasses": {
+					"options": {
+						"attributes": ["classlist"],
+						"functions": ["clsx", "cva", "tw"]
+					}
+				}
+			}
 		}
 	},
 	"javascript": {

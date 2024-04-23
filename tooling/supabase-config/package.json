@@ -1,0 +1,21 @@
+{
+	"name": "@repo/supabase-config",
+	"version": "0.0.0",
+	"exports": {
+		"./types": "./src/index.ts"
+	},
+	"scripts": {
+		"start": "supabase status || supabase start",
+		"reset": "supabase db reset || supabase start",
+		"test": "supabase db test",
+		"lint": "supabase db lint",
+		"deploy": "supabase link --project-ref $SUPABASE_PROJECT_REF && supabase db push"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3",
+		"@repo/typescript-config": "*"
+	},
+	"dependencies": {
+		"@supabase/supabase-js": "^2.42.5"
+	}
+}

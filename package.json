@@ -9,12 +9,16 @@
 		"postinstall": "lefthook install"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.5.1",
+		"@biomejs/biome": "^1.7.1",
 		"@commitlint/cli": "^18.4.4",
 		"@commitlint/config-conventional": "^18.4.4",
 		"@repo/typescript-config": "workspace:*",
 		"lefthook": "^1.5.6",
-		"turbo": "latest"
+		"turbo": "latest",
+		"@types/bun": "latest"
 	},
-	"workspaces": ["apps/*", "packages/*", "tooling/*"]
+	"workspaces": ["apps/*", "packages/*", "tooling/*"],
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
 }

@@ -10,7 +10,7 @@
 		"generate:component": "turbo gen react-component"
 	},
 	"devDependencies": {
-		"@repo/typescript-config": "workspace:*",
+		"@repo/tsconfig": "workspace:*",
 		"@turbo/gen": "^1.11.3",
 		"@types/node": "^20.10.6",
 		"@types/react": "^18.2.46",

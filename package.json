@@ -6,18 +6,25 @@
 	},
 	"packageManager": "pnpm@9.2.0",
 	"scripts": {
-		"build": "turbo build",
-		"dev": "turbo dev",
+		"build": "turbo run build",
+		"clean": "git clean -xdf node_modules",
+		"clean:workspaces": "turbo run clean",
+		"db:push": "turbo -F @acme/db push",
+		"db:studio": "turbo -F @acme/db studio",
+		"dev": "turbo watch dev",
+		"dev:next": "turbo watch dev -F @acme/nextjs...",
 		"lint": "turbo lint",
 		"format": "pnpm dlx @biomejs/biome format --write *",
-		"postinstall": "lefthook install"
+		"postinstall": "pnpm lint:ws && lefthook install",
+		"typecheck": "turbo run typecheck",
+		"ui-add": "turbo run ui-add"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.7.1",
 		"@commitlint/cli": "^18.4.4",
 		"@commitlint/config-conventional": "^18.4.4",
-		"@repo/typescript-config": "workspace:*",
 		"lefthook": "^1.5.6",
+		"@turbo/gen": "^2.0.6",
 		"turbo": "latest"
 	},
 	"workspaces": ["apps/*", "packages/*", "tooling/*"],

@@ -12,7 +12,7 @@
 		"clean": "rm -rf .turbo node_modules"
 	},
 	"devDependencies": {
-		"@repo/typescript-config": "workspace:*",
+		"@repo/tsconfig": "workspace:*",
 		"@turbo/gen": "^1.11.3",
 		"typescript": "^5.3.3"
 	},

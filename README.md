@@ -8,7 +8,7 @@ It aims to use blazingly fast and modern technology.
 Create a repo based on this template and run
 
 ```sh
-bun install
+pnpm i
 turbo dev
 ```
 
@@ -45,7 +45,7 @@ This monorepo has some additional tools already setup for you:
 To build all apps and packages, run the following command:
 
 ```
-bun build
+pnpm build
 ```
 
 ### Develop

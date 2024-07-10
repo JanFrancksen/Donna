@@ -20,6 +20,6 @@
 	},
 	"dependencies": {
 		"class-variance-authority": "^0.7.0",
-		"react-aria-components": "^1.0.1"
+		"react-aria-components": "^1.2.1"
 	}
 }

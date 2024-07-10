@@ -2,7 +2,7 @@
 	"name": "donna",
 	"private": true,
 	"engines": {
-		"node": ">=20.12.0"
+		"node": ">=20.15.1"
 	},
 	"packageManager": "pnpm@9.2.0",
 	"scripts": {

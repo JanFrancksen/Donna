@@ -36,10 +36,10 @@
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
-		"@acme/tsconfig": "workspace:*",
+		"@repo/tsconfig": "workspace:*",
 		"dotenv-cli": "^7.4.2",
 		"drizzle-kit": "^0.23.0",
-		"biome": "1.8.3",
+		"@biomejs/biome": "1.8.3",
 		"typescript": "^5.5.3"
 	}
 }

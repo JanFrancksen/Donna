@@ -15,7 +15,7 @@
 		"dev:next": "turbo watch dev -F @repo/nextjs...",
 		"lint": "turbo lint",
 		"format": "pnpm dlx @biomejs/biome format --write *",
-		"postinstall": "pnpm lint:ws && lefthook install",
+		"postinstall": "lefthook install",
 		"typecheck": "turbo run typecheck",
 		"ui-add": "turbo run ui-add"
 	},

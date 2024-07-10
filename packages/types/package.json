@@ -9,7 +9,7 @@
 		"clean": "rm -rf .turbo node_modules"
 	},
 	"devDependencies": {
-		"typescript": "^5.3.3",
+		"typescript": "^5.5.3",
 		"@repo/tsconfig": "*"
 	}
 }

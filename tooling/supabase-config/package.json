@@ -12,7 +12,7 @@
 		"deploy": "supabase link --project-ref $SUPABASE_PROJECT_REF && supabase db push"
 	},
 	"devDependencies": {
-		"typescript": "^5.3.3",
+		"typescript": "^5.5.3",
 		"@repo/tsconfig": "*"
 	},
 	"dependencies": {

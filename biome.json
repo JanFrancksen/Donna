@@ -1,11 +1,12 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
 			"nursery": {
 				"useSortedClasses": {
+					"level": "warn",
 					"options": {
 						"attributes": ["classlist"],
 						"functions": ["clsx", "cva", "tw"]
@@ -19,12 +20,13 @@
 			"enabled": true,
 			"quoteStyle": "single",
 			"jsxQuoteStyle": "single",
-			"trailingComma": "es5"
+			"trailingCommas": "es5"
 		}
 	},
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
-		"useIgnoreFile": true
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
 	}
 }

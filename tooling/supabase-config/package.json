@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"typescript": "^5.5.3",
-		"@repo/tsconfig": "*"
+		"@repo/tsconfig": "workspace:*"
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.44.3"

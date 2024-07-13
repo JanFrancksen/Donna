@@ -3,23 +3,35 @@
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		"./Button": "./src/Button/Button.tsx"
+		".": "./src/index.ts",
+		"./*": ["./src/*.tsx", "./src/*.ts"]
 	},
 	"scripts": {
-		"lint": "eslint . --max-warnings 0",
+		"clean": "rm -rf .turbo node_modules",
+		"typecheck": "tsc --noEmit --emitDeclarationOnly false",
 		"generate:component": "turbo gen react-component"
+	},
+	"dependencies": {
+		"class-variance-authority": "^0.7.0",
+		"react-aria-components": "^1.2.1",
+		"@hookform/resolvers": "^3.9.0",
+		"next-themes": "^0.3.0",
+		"react-hook-form": "^7.52.1",
+		"sonner": "^1.5.0",
+		"tailwind-merge": "^2.4.0",
+		"tailwindcss-animate": "^1.0.7"
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",
 		"@turbo/gen": "^2.0.6",
-		"@types/node": "^20.14.10",
-		"@types/react": "^18.3.3",
-		"@types/react-dom": "^18.3.0",
-		"react": "^18.3.1",
-		"typescript": "^5.5.3"
+		"@types/react": "catalog:react18",
+		"tailwindcss": "^3.4.4",
+		"react": "catalog:react18",
+		"typescript": "catalog:",
+		"zod": "catalog:"
 	},
-	"dependencies": {
-		"class-variance-authority": "^0.7.0",
-		"react-aria-components": "^1.2.1"
+	"peerDependencies": {
+		"react": "catalog:react18",
+		"zod": "catalog:"
 	}
 }

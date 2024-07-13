@@ -1,4 +1,4 @@
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 import createJiti from 'jiti';
 
 // Import env files to validate at build time. Use jiti so we can load .ts files in here.
@@ -18,7 +18,7 @@ const config = {
 	],
 
 	/** We already do linting and typechecking as separate tasks in CI */
-	biome: { ignoreDuringBuilds: true },
+	// biome: { ignoreDuringBuilds: true },
 	typescript: { ignoreBuildErrors: true },
 };
 

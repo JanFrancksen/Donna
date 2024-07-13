@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 	description: 'Your awesome description.',
 };
 
+const test = 1;
+
 export default function RootLayout({
 	children,
 }: {

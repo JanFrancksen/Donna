@@ -33,13 +33,13 @@
 		"@t3-oss/env-core": "^0.10.1",
 		"drizzle-orm": "^0.32.0",
 		"drizzle-zod": "^0.5.1",
+		"postgres": "^3.4.4",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",
 		"dotenv-cli": "^7.4.2",
 		"drizzle-kit": "^0.23.0",
-		"@biomejs/biome": "1.8.3",
 		"typescript": "^5.5.3"
 	}
 }

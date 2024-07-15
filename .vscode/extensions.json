@@ -2,8 +2,8 @@
 	"recommendations": [
 		"dbaeumer.vscode-eslint",
 		"expo.vscode-expo-tools",
-		"esbenp.prettier-vscode",
 		"yoavbls.pretty-ts-errors",
+		"biomejs.biome",
 		"bradlc.vscode-tailwindcss"
 	]
 }

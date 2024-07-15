@@ -13,8 +13,8 @@
 		"db:studio": "turbo -F @repo/db studio",
 		"dev": "turbo watch dev",
 		"dev:next": "turbo watch dev -F @repo/nextjs...",
-		"lint": "pnpm dlx @biomejs/biome check --staged",
-		"format": "pnpm dlx @biomejs/biome format --write *",
+		"lint": "pnpm biome lint --write *",
+		"format": "pnpm biome format --write *",
 		"postinstall": "lefthook install",
 		"typecheck": "turbo run typecheck"
 	},

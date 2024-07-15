@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    tailwindcss:
+      specifier: ^3.4.5
+      version: 3.4.5
     typescript:
       specifier: ^5.5.3
       version: 5.5.3
@@ -101,9 +104,6 @@ importers:
         specifier: catalog:react18
         version: 18.3.1(react@18.3.1)
     devDependencies:
-      '@biomejs/biome':
-        specifier: 1.8.3
-        version: 1.8.3
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
@@ -129,7 +129,7 @@ importers:
         specifier: ^1.21.6
         version: 1.21.6
       tailwindcss:
-        specifier: ^3.4.5
+        specifier: 'catalog:'
         version: 3.4.5(ts-node@10.9.2(@types/node@20.14.10)(typescript@5.5.3))
       typescript:
         specifier: 'catalog:'
@@ -156,14 +156,14 @@ importers:
         specifier: 2.2.1
         version: 2.2.1
       zod:
-        specifier: ^3.22.4
+        specifier: 'catalog:'
         version: 3.23.8
     devDependencies:
       '@repo/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       typescript:
-        specifier: ^5.5.3
+        specifier: 'catalog:'
         version: 5.5.3
 
   packages/db:
@@ -206,7 +206,7 @@ importers:
         specifier: workspace:*
         version: link:../../tooling/typescript
       typescript:
-        specifier: ^5.5.3
+        specifier: 'catalog:'
         version: 5.5.3
 
   packages/ui:
@@ -249,7 +249,7 @@ importers:
         specifier: catalog:react18
         version: 18.3.1
       tailwindcss:
-        specifier: ^3.4.5
+        specifier: 'catalog:'
         version: 3.4.5(ts-node@10.9.2(@types/node@20.14.10)(typescript@5.5.3))
       typescript:
         specifier: 'catalog:'
@@ -261,7 +261,7 @@ importers:
   packages/validators:
     dependencies:
       zod:
-        specifier: ^3.23.8
+        specifier: 'catalog:'
         version: 3.23.8
     devDependencies:
       '@repo/tsconfig':
@@ -271,7 +271,7 @@ importers:
         specifier: ^2.0.6
         version: 2.0.6(@types/node@20.14.10)(typescript@5.5.3)
       typescript:
-        specifier: ^5.5.3
+        specifier: 'catalog:'
         version: 5.5.3
 
   tooling/github: {}
@@ -286,7 +286,7 @@ importers:
         specifier: workspace:*
         version: link:../typescript
       typescript:
-        specifier: ^5.5.3
+        specifier: 'catalog:'
         version: 5.5.3
 
   tooling/tailwind:
@@ -295,7 +295,7 @@ importers:
         specifier: ^8.4.39
         version: 8.4.39
       tailwindcss:
-        specifier: ^3.4.5
+        specifier: 'catalog:'
         version: 3.4.5(ts-node@10.9.2(@types/node@20.14.10)(typescript@5.5.3))
       tailwindcss-animate:
         specifier: ^1.0.7
@@ -305,7 +305,7 @@ importers:
         specifier: workspace:*
         version: link:../typescript
       typescript:
-        specifier: ^5.5.3
+        specifier: 'catalog:'
         version: 5.5.3
 
   tooling/typescript: {}

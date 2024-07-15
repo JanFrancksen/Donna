@@ -16,7 +16,7 @@
 		"@repo/validators": "workspace:*",
 		"@supabase/supabase-js": "^2.44.4",
 		"@trpc/server": "11.0.0-next-beta.264",
-		"nanoid": "^5.0.6",
+		"nanoid": "^5.0.7",
 		"superjson": "2.2.1",
 		"zod": "catalog:"
 	},

@@ -150,7 +150,7 @@ importers:
         specifier: 11.0.0-next-beta.264
         version: 11.0.0-next-beta.264
       nanoid:
-        specifier: ^5.0.6
+        specifier: ^5.0.7
         version: 5.0.7
       superjson:
         specifier: 2.2.1

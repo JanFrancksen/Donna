@@ -21,8 +21,7 @@
 			"cache": false
 		},
 		"format-lint": {
-			"dependsOn": ["^topo", "^build"],
-			"outputs": ["node_modules/.cache/.eslintcache"]
+			"dependsOn": ["^topo", "^build"]
 		},
 		"typecheck": {
 			"dependsOn": ["^topo", "^build"],

@@ -8,15 +8,14 @@
 		}
 	},
 	"scripts": {
-		"lint": "eslint . --max-warnings 0",
 		"clean": "rm -rf .turbo node_modules"
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",
 		"@turbo/gen": "^2.0.6",
-		"typescript": "^5.5.3"
+		"typescript": "catalog:"
 	},
 	"dependencies": {
-		"zod": "^3.23.8"
+		"zod": "catalog:"
 	}
 }

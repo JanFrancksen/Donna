@@ -5,11 +5,10 @@
 		"./types": "./src/index.ts"
 	},
 	"scripts": {
-		"lint": "eslint . --max-warnings 0",
 		"clean": "rm -rf .turbo node_modules"
 	},
 	"devDependencies": {
-		"typescript": "^5.5.3",
+		"typescript": "catalog:",
 		"@repo/tsconfig": "workspace:*"
 	}
 }

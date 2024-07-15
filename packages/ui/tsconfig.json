@@ -1,10 +1,11 @@
 {
-	"extends": "@repo/tsconfig/react-library.json",
+	"extends": "@repo/tsconfig/base.json",
 	"compilerOptions": {
-		"jsx": "react",
+		"jsx": "react-jsx",
 		"moduleResolution": "nodenext",
-		"module": "nodenext"
+		"module": "nodenext",
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
 	},
-	"include": ["src"],
+	"include": ["*.ts", "src"],
 	"exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,27 @@
+{
+	"name": "@repo/api",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"license": "MIT",
+	"scripts": {
+		"clean": "rm -rf .turbo node_modules",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@repo/db": "workspace:*",
+		"@repo/validators": "workspace:*",
+		"@supabase/supabase-js": "^2.39.7",
+		"@trpc/server": "11.0.0-next-beta.264",
+		"nanoid": "^5.0.6",
+		"superjson": "2.2.1",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"typescript": "^5.3.3"
+	}
+}

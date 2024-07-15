@@ -9,13 +9,7 @@ const config = {
 	reactStrictMode: true,
 
 	/** Enables hot reloading for local packages without a build step */
-	transpilePackages: [
-		// '@acme/api',
-		// '@acme/auth',
-		'@repo/db',
-		'@repo/ui',
-		'@repo/validators',
-	],
+	transpilePackages: ['@repo/api', '@repo/db', '@repo/ui', '@repo/validators'],
 
 	/** We already do linting and typechecking as separate tasks in CI */
 	typescript: { ignoreBuildErrors: true },

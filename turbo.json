@@ -20,11 +20,7 @@
 			"persistent": true,
 			"cache": false
 		},
-		"format": {
-			"outputs": ["node_modules/.cache/.prettiercache"],
-			"outputLogs": "new-only"
-		},
-		"lint": {
+		"format-lint": {
 			"dependsOn": ["^topo", "^build"],
 			"outputs": ["node_modules/.cache/.eslintcache"]
 		},

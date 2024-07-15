@@ -163,7 +163,7 @@ importers:
         specifier: workspace:*
         version: link:../../tooling/typescript
       typescript:
-        specifier: ^5.3.3
+        specifier: ^5.5.3
         version: 5.5.3
 
   packages/db:

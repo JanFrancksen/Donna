@@ -23,7 +23,7 @@
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",
-		"@turbo/gen": "^2.0.6",
+		"@turbo/gen": "^2.0.7",
 		"@types/react": "catalog:react18",
 		"tailwindcss": "catalog:",
 		"react": "catalog:react18",

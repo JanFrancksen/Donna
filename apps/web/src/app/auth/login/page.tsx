@@ -34,7 +34,7 @@ export default function LoginPage() {
 							console.log('Sign in response', res);
 							router.push('/');
 						}}
-						type='button'
+						type='submit'
 					>
 						Sign in
 					</button>
@@ -46,7 +46,7 @@ export default function LoginPage() {
 							await signUp(email, password);
 							alert('Check your email for a confirmation link.');
 						}}
-						type='button'
+						type='submit'
 					>
 						{`Don't have an account? Sign up.`}
 					</button>

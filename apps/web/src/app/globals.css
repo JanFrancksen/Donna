@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer base {
+  .focus-state {
+@apply outline outline-blue-600 outline-offset-2 dark:outline-blue-500 forced-colors:outline-[Highlight] focus:outline-2 outline-0
+  };
+  
+    :root {
+        --color-primary: #1a202c;
+        --color-primary-strong: #2d3748;
+        --color-primary-weak: #4a5568;
+        --color-accent: #ed64a6;
+        --color-accent-strong: #d53f8c;
+        --color-accent-weak: #b83280;
+        --color-background: #f7fafc;
+        --color-text: #2d3748;
+        --color-border: #e2e8f0;
+      }
+      
+      [data-theme="dark"] {
+        --color-primary: #f7fafc;
+        --color-primary-strong: #e2e8f0;
+        --color-primary-weak: #cbd5e0;
+        --color-accent: #d53f8c;
+        --color-accent-strong: #b83280;
+        --color-accent-weak: #97266d;
+        --color-background: #1a202c;
+        --color-text: #f7fafc;
+        --color-border: #4a5568;
+      }
+      
+  }

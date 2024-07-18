@@ -12,10 +12,11 @@
 		"generate:component": "turbo gen react-component"
 	},
 	"dependencies": {
-		"class-variance-authority": "^0.7.0",
-		"react-aria-components": "^1.2.1",
 		"@hookform/resolvers": "^3.9.0",
+		"class-variance-authority": "^0.7.0",
+		"lucide-react": "^0.408.0",
 		"next-themes": "^0.3.0",
+		"react-aria-components": "^1.2.1",
 		"react-hook-form": "^7.52.1",
 		"sonner": "^1.5.0",
 		"tailwind-merge": "^2.4.0",
@@ -25,8 +26,8 @@
 		"@repo/tsconfig": "workspace:*",
 		"@turbo/gen": "^2.0.7",
 		"@types/react": "catalog:react18",
-		"tailwindcss": "catalog:",
 		"react": "catalog:react18",
+		"tailwindcss": "catalog:",
 		"typescript": "catalog:",
 		"zod": "catalog:"
 	},

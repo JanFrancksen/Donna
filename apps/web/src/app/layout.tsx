@@ -1,7 +1,7 @@
-import { CreatePostSchema } from '@repo/validators';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { UserMenu } from '@repo/ui/UserMenu/UserMenu';
 import { Suspense } from 'react';
 import { env } from '~/env';
 import { AuthShowcase } from './_components/auth-showcase';
@@ -45,18 +45,21 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
 	children,
-}: {
-	children: React.ReactNode;
-}): JSX.Element {
+}: { children: React.ReactNode }): JSX.Element {
 	const posts = api.post.all();
 
 	return (
-		<html lang='en'>
-			<body className={inter.className}>
-				<TRPCReactProvider>
+		<html lang='de'>
+			<TRPCReactProvider>
+				<body className={inter.className}>
+					<UserMenu />
+					<header>
+						<div className='fixed top-2 right-2'>
+							<AuthShowcase />
+						</div>
+					</header>
 					<main className='flex min-h-screen flex-col items-center justify-center bg-slate-950'>
 						{children}
-						<AuthShowcase />
 
 						<CreatePostForm />
 						<div className='h-[40vh] w-full max-w-2xl overflow-y-scroll'>
@@ -73,8 +76,8 @@ export default function RootLayout({
 							</Suspense>
 						</div>
 					</main>
-				</TRPCReactProvider>
-			</body>
+				</body>
+			</TRPCReactProvider>
 		</html>
 	);
 }

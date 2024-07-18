@@ -11,7 +11,7 @@ export async function AuthShowcase() {
 	if (!user.data.user) {
 		return (
 			<Link
-				className='rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20'
+				className='rounded-full px-10 py-3 font-semibold no-underline transition hover:bg-white/20'
 				href='/auth/login'
 			>
 				Sign in
@@ -20,15 +20,13 @@ export async function AuthShowcase() {
 	}
 
 	return (
-		<div className='flex flex-col items-center justify-center gap-4'>
-			<p className='text-center text-2xl text-white'>
-				{user.data.user && <span>Logged in as {user.data.user.email}</span>}
-			</p>
+		<div className='flex items-center gap-x-2'>
+			<p className='text-center text-white'>{user.data.user.email}</p>
 
 			<form action={signOut}>
 				<button
-					type='button'
-					className='rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20'
+					type='submit'
+					className='rounded-full bg-purple-500 px-4 py-2 font-semibold no-underline transition hover:bg-white/20'
 				>
 					Sign out
 				</button>

@@ -1,9 +1,8 @@
 'use client';
 
+import type { RouterOutputs } from '@repo/api';
 import Image from 'next/image';
 import { use, useState } from 'react';
-
-import type { RouterOutputs } from '@repo/api';
 import { api } from '../trpc/react';
 
 export function CreatePostForm() {
@@ -39,7 +38,7 @@ export function CreatePostForm() {
 			}}
 		>
 			<input
-				className='mb-2 rounded bg-white/10 p-2 text-white'
+				className='mb-2 rounded p-2'
 				value={title}
 				onChange={(e) => setTitle(e.target.value)}
 				placeholder='Title'
@@ -77,7 +76,6 @@ export function CreatePostForm() {
 export function PostList(props: {
 	posts: Promise<RouterOutputs['post']['all']>;
 }) {
-	// TODO: Make `useSuspenseQuery` work without having to pass a promise from RSC
 	const initialData = use(props.posts);
 	const { data: posts } = api.post.all.useQuery(undefined, {
 		initialData,

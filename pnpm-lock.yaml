@@ -47,14 +47,14 @@ importers:
         specifier: ^19.2.2
         version: 19.2.2
       '@turbo/gen':
-        specifier: ^2.0.7
-        version: 2.0.7(@types/node@20.14.11)(typescript@5.5.3)
+        specifier: ^2.0.9
+        version: 2.0.9(@types/node@20.14.11)(typescript@5.5.3)
       lefthook:
-        specifier: ^1.7.3
-        version: 1.7.3
+        specifier: ^1.7.4
+        version: 1.7.4
       turbo:
         specifier: latest
-        version: 2.0.7
+        version: 2.0.9
 
   apps/web:
     dependencies:
@@ -246,8 +246,8 @@ importers:
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@turbo/gen':
-        specifier: ^2.0.7
-        version: 2.0.7(@types/node@20.14.11)(typescript@5.5.3)
+        specifier: ^2.0.9
+        version: 2.0.9(@types/node@20.14.11)(typescript@5.5.3)
       '@types/react':
         specifier: catalog:react18
         version: 18.3.3
@@ -274,8 +274,8 @@ importers:
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@turbo/gen':
-        specifier: ^2.0.7
-        version: 2.0.7(@types/node@20.14.11)(typescript@5.5.3)
+        specifier: ^2.0.9
+        version: 2.0.9(@types/node@20.14.11)(typescript@5.5.3)
       typescript:
         specifier: 'catalog:'
         version: 5.5.3
@@ -1473,12 +1473,12 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
-  '@turbo/gen@2.0.7':
-    resolution: {integrity: sha512-jBpbjexgDUsyQ3yMzADWAeCtA3L5Qbme0emLFFPGMOfYhpCsF1d/DrEMrAbN9KU/LoWuymC/i/KNys/bTl61jA==}
+  '@turbo/gen@2.0.9':
+    resolution: {integrity: sha512-IVCBa/+qxsO7srAvFpto0AF09Zei+zpDoosUsHSEwgn/22rVuZ6hdcJdxcQ9kHeMafJpxqLK9iHNSdXUctJ0Vw==}
     hasBin: true
 
-  '@turbo/workspaces@2.0.7':
-    resolution: {integrity: sha512-YjnPayYDpXxHVAspP41pAeB7ALpSCXMvPIkFguI62G1U/c7Sv5jUyjBleec1U5VPyH9gnGMhHc8yb/8nH/itgw==}
+  '@turbo/workspaces@2.0.9':
+    resolution: {integrity: sha512-+OTrQULhuv1qOKE+0DC360sSDB6ad7opEKLGFcLlmLgM7D75qv6UThfnw1Rjh8inIlBSSCCu/co2BaJjgkkpAw==}
     hasBin: true
 
   '@types/conventional-commits-parser@5.0.0':
@@ -2337,56 +2337,48 @@ packages:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
 
-  lefthook-darwin-arm64@1.7.3:
-    resolution: {integrity: sha512-xhXVqWca69DPmE+rtVdwvLx/EypJ74oA5omMydn9h8IF2zYHPdalsB8R2jg5fPthPlWM6HNIpG3j7FoAGUJ2uA==}
+  lefthook-darwin-arm64@1.7.4:
+    resolution: {integrity: sha512-6XpenaP0W7ZYA3lhHey/C1U+KmYz6eCq2cGswQsrTX+xdtHdWW3NbbOKngxATRTF8+CtF6m9UB2afP7qqkCghQ==}
     cpu: [arm64]
     os: [darwin]
-    hasBin: true
 
-  lefthook-darwin-x64@1.7.3:
-    resolution: {integrity: sha512-Sch+vy/dEcMhkJiYBn5MnBq2wCxMHVO/rpwIST6XtR6gxaJ1QRpGc63ZkcamyOaR3o0RncIYlZSRQ2zqOO96KQ==}
+  lefthook-darwin-x64@1.7.4:
+    resolution: {integrity: sha512-lpQXbPMHiaWE7+9fV+spjuMKiZ3J/+oI6hY1/l48MO3LmSpIv6DNy0VHho1fZVQnHdBU4bDh5c1G0r1f5T0irg==}
     cpu: [x64]
     os: [darwin]
-    hasBin: true
 
-  lefthook-freebsd-arm64@1.7.3:
-    resolution: {integrity: sha512-z7/uJyozWIQcwYVNK2hTjid1F3l/9EaLfNMtSZPWaA8gvmzt7SEVIKqseBrZS71yml9SfxIjhxpfBEn0LC/rmw==}
+  lefthook-freebsd-arm64@1.7.4:
+    resolution: {integrity: sha512-wv+JZgkD1/wi4X5aKKNodvxNcFcYmvL7uyzKkbtd/LgX5ssh9r5pO9J/71ULGtEuTXH4kqORRtez7u/ygqMEew==}
     cpu: [arm64]
     os: [freebsd]
-    hasBin: true
 
-  lefthook-freebsd-x64@1.7.3:
-    resolution: {integrity: sha512-FdNGC7fU4RrznU1frxOmAUVD+8sXn2JRi5P+7fjh1brnxcW7ZyLWELtO89NJcxnJgnjoVl+i1qn6nIp7lxYyTQ==}
+  lefthook-freebsd-x64@1.7.4:
+    resolution: {integrity: sha512-xoYR0Ay8pbyY9W9mI+iI9VDkkCVYSXhMf9XyOChSlu2XmjKiqi23hjCXvSOpvHQ7jphGvAVpE3Byijr6Xjuihw==}
     cpu: [x64]
     os: [freebsd]
-    hasBin: true
 
-  lefthook-linux-arm64@1.7.3:
-    resolution: {integrity: sha512-MfBKlkoy+579BPF8xyGwAN9hsMGtHp3xhMSKd3ub8yF5CRJzkrG6RMePh3h3XynB0knmJAhPbjMLrzrfIUJTWA==}
+  lefthook-linux-arm64@1.7.4:
+    resolution: {integrity: sha512-WvXWzSM/e08n2f5lcC8j+pUMS0RzZftJK4zuBQ36TstSYXfBjWiw+FMnKCVZk6Q8Zc0icyF8sTmKQAyKCgX+UA==}
     cpu: [arm64]
     os: [linux]
-    hasBin: true
 
-  lefthook-linux-x64@1.7.3:
-    resolution: {integrity: sha512-uC3H8CcL8IMpbby6zk8CyO2gjSnOFL7SvpKgcVkF8RBtLEEMKQenQ/BuVLE1MHYrGydTN7wxhYSNu3vJ0BA3VA==}
+  lefthook-linux-x64@1.7.4:
+    resolution: {integrity: sha512-eR5NxGzqPJm3wDTm4HStwGxOZ8Omb0ooodyuQdEOxtYidLrd4U18N14huwCEFd3BAOrjIWYV8plH+ReTZE56eg==}
     cpu: [x64]
     os: [linux]
-    hasBin: true
 
-  lefthook-windows-arm64@1.7.3:
-    resolution: {integrity: sha512-omVIe94nq2zNVWh74n11q2hugh1Eb+C/VkstZ7xpXmE9D3gKHdjbrHd+qoMwdF2RKv/TvT1dp/GHpIjuMRVQnw==}
+  lefthook-windows-arm64@1.7.4:
+    resolution: {integrity: sha512-C+MdHH+0ylermetMHwfHsYYNI5HI6QEOx7N4Iw4Ea6c3Yuj3eG3LsAzrhsup7KLSSBmDgIHOCJUx/Mfh2z+ATw==}
     cpu: [arm64]
     os: [win32]
-    hasBin: true
 
-  lefthook-windows-x64@1.7.3:
-    resolution: {integrity: sha512-J1Y/AgnM9oNa7c8HBhkmPQl/ozL4T54tbuOPCRkMIOtZwD9Qvoir5INJnhrHlhhghM0kp0SM3bNr/DTroPEuig==}
+  lefthook-windows-x64@1.7.4:
+    resolution: {integrity: sha512-BDQhiRzmMYPFQFtVtkRfUfeZuSlemG1oJfGKYXlCGFskvK9Jm1nGFnG0Ig63FAQaFdW33DFoLdr9ZKFTUQeSwQ==}
     cpu: [x64]
     os: [win32]
-    hasBin: true
 
-  lefthook@1.7.3:
-    resolution: {integrity: sha512-GHHk2UT9UpLM66QhgdwmUXI0PHe12ti/XtTZkpuQpKIpo+Eo4YNtm9qkcPXTr8mGKkQ3aOu6GvgfS46lGJVpYg==}
+  lefthook@1.7.4:
+    resolution: {integrity: sha512-lVv3nKH9l3KMDS3bySROvWJSw1+AsBHUO7xaA0rg1IEBZrj3+ePmM+a8elX+GU3Go1OzsZEYjo5AOOeLoZ7FQg==}
     hasBin: true
 
   lilconfig@2.1.0:
@@ -3138,38 +3130,38 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  turbo-darwin-64@2.0.7:
-    resolution: {integrity: sha512-J1RBvQGqKeUwLJrZbfrm4tHshagdMeGAwd7rpLpfUrw0PNmGfcBazJf6dIGXG59/GHzJmS0/eAZ8qDchfVbIFA==}
+  turbo-darwin-64@2.0.9:
+    resolution: {integrity: sha512-owlGsOaExuVGBUfrnJwjkL1BWlvefjSKczEAcpLx4BI7Oh6ttakOi+JyomkPkFlYElRpjbvlR2gP8WIn6M/+xQ==}
     cpu: [x64]
     os: [darwin]
 
-  turbo-darwin-arm64@2.0.7:
-    resolution: {integrity: sha512-h1JK8uuEjoHx1SvvTZiottj+4kDmiv+hivnLUzNwO75qKblMsd38IsFB0J2sMRz7JacFlf+3ry8SItznBW67Xw==}
+  turbo-darwin-arm64@2.0.9:
+    resolution: {integrity: sha512-XAXkKkePth5ZPPE/9G9tTnPQx0C8UTkGWmNGYkpmGgRr8NedW+HrPsi9N0HcjzzIH9A4TpNYvtiV+WcwdaEjKA==}
     cpu: [arm64]
     os: [darwin]
 
-  turbo-linux-64@2.0.7:
-    resolution: {integrity: sha512-dsr7GFeHAYVMnXWDDjhpsAQetejU4OlkNBRA5hfmnIcl2sSyOYa3EvoeJ6j5z5vTNIJ9VO4I1h0jK3lTjEoonA==}
+  turbo-linux-64@2.0.9:
+    resolution: {integrity: sha512-l9wSgEjrCFM1aG16zItBsZ206ZlhSSx1owB8Cgskfv0XyIXRGHRkluihiaxkp+UeU5WoEfz4EN5toc+ICA0q0w==}
     cpu: [x64]
     os: [linux]
 
-  turbo-linux-arm64@2.0.7:
-    resolution: {integrity: sha512-bJbwXvyX1XPzY1jHgkqggls/L4yFyHVK8GGACF3kcg6x7lYV2SXkUYRyOC3WqzW7euqa9Zw/32jrIPP4Qy31Vw==}
+  turbo-linux-arm64@2.0.9:
+    resolution: {integrity: sha512-gRnjxXRne18B27SwxXMqL3fJu7jw/8kBrOBTBNRSmZZiG1Uu3nbnP7b4lgrA/bCku6C0Wligwqurvtpq6+nFHA==}
     cpu: [arm64]
     os: [linux]
 
-  turbo-windows-64@2.0.7:
-    resolution: {integrity: sha512-aBH+5A7IN957MqXMrw8xN0CWtH/fPFL+xTlloO6074Eaa8WfnctSAnaSujm6f4xF2T8lFx+ZprBvnO9oKvLQQQ==}
+  turbo-windows-64@2.0.9:
+    resolution: {integrity: sha512-ZVo0apxUvaRq4Vm1qhsfqKKhtRgReYlBVf9MQvVU1O9AoyydEQvLDO1ryqpXDZWpcHoFxHAQc9msjAMtE5K2lA==}
     cpu: [x64]
     os: [win32]
 
-  turbo-windows-arm64@2.0.7:
-    resolution: {integrity: sha512-ButUCpO5nTi+jyTSIY2mQ9dVz+mCGxJ6sHyn0xGlNoJWdisKXb0BtWCLAjM26gg/yp9Kt1MBowMQyYVruPV0Qw==}
+  turbo-windows-arm64@2.0.9:
+    resolution: {integrity: sha512-sGRz7c5Pey6y7y9OKi8ypbWNuIRPF9y8xcMqL56OZifSUSo+X2EOsOleR9MKxQXVaqHPGOUKWsE6y8hxBi9pag==}
     cpu: [arm64]
     os: [win32]
 
-  turbo@2.0.7:
-    resolution: {integrity: sha512-76iNWZpmKAKjj+yL0Wtcu2LpDIM5Nz7JS3fHOZPYS0AKuC2boJ24276VAiK4PKwbpBB//TYKDpSLuQ6cfR49pg==}
+  turbo@2.0.9:
+    resolution: {integrity: sha512-QaLaUL1CqblSKKPgLrFW3lZWkWG4pGBQNW+q1ScJB5v1D/nFWtsrD/yZljW/bdawg90ihi4/ftQJ3h6fz1FamA==}
     hasBin: true
 
   type-fest@0.21.3:
@@ -4754,9 +4746,9 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@turbo/gen@2.0.7(@types/node@20.14.11)(typescript@5.5.3)':
+  '@turbo/gen@2.0.9(@types/node@20.14.11)(typescript@5.5.3)':
     dependencies:
-      '@turbo/workspaces': 2.0.7
+      '@turbo/workspaces': 2.0.9
       commander: 10.0.1
       fs-extra: 10.1.0
       inquirer: 8.2.6
@@ -4774,7 +4766,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@turbo/workspaces@2.0.7':
+  '@turbo/workspaces@2.0.9':
     dependencies:
       commander: 10.0.1
       execa: 5.1.1
@@ -5637,40 +5629,40 @@ snapshots:
 
   jsonparse@1.3.1: {}
 
-  lefthook-darwin-arm64@1.7.3:
+  lefthook-darwin-arm64@1.7.4:
     optional: true
 
-  lefthook-darwin-x64@1.7.3:
+  lefthook-darwin-x64@1.7.4:
     optional: true
 
-  lefthook-freebsd-arm64@1.7.3:
+  lefthook-freebsd-arm64@1.7.4:
     optional: true
 
-  lefthook-freebsd-x64@1.7.3:
+  lefthook-freebsd-x64@1.7.4:
     optional: true
 
-  lefthook-linux-arm64@1.7.3:
+  lefthook-linux-arm64@1.7.4:
     optional: true
 
-  lefthook-linux-x64@1.7.3:
+  lefthook-linux-x64@1.7.4:
     optional: true
 
-  lefthook-windows-arm64@1.7.3:
+  lefthook-windows-arm64@1.7.4:
     optional: true
 
-  lefthook-windows-x64@1.7.3:
+  lefthook-windows-x64@1.7.4:
     optional: true
 
-  lefthook@1.7.3:
+  lefthook@1.7.4:
     optionalDependencies:
-      lefthook-darwin-arm64: 1.7.3
-      lefthook-darwin-x64: 1.7.3
-      lefthook-freebsd-arm64: 1.7.3
-      lefthook-freebsd-x64: 1.7.3
-      lefthook-linux-arm64: 1.7.3
-      lefthook-linux-x64: 1.7.3
-      lefthook-windows-arm64: 1.7.3
-      lefthook-windows-x64: 1.7.3
+      lefthook-darwin-arm64: 1.7.4
+      lefthook-darwin-x64: 1.7.4
+      lefthook-freebsd-arm64: 1.7.4
+      lefthook-freebsd-x64: 1.7.4
+      lefthook-linux-arm64: 1.7.4
+      lefthook-linux-x64: 1.7.4
+      lefthook-windows-arm64: 1.7.4
+      lefthook-windows-x64: 1.7.4
 
   lilconfig@2.1.0: {}
 
@@ -6483,32 +6475,32 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  turbo-darwin-64@2.0.7:
+  turbo-darwin-64@2.0.9:
     optional: true
 
-  turbo-darwin-arm64@2.0.7:
+  turbo-darwin-arm64@2.0.9:
     optional: true
 
-  turbo-linux-64@2.0.7:
+  turbo-linux-64@2.0.9:
     optional: true
 
-  turbo-linux-arm64@2.0.7:
+  turbo-linux-arm64@2.0.9:
     optional: true
 
-  turbo-windows-64@2.0.7:
+  turbo-windows-64@2.0.9:
     optional: true
 
-  turbo-windows-arm64@2.0.7:
+  turbo-windows-arm64@2.0.9:
     optional: true
 
-  turbo@2.0.7:
+  turbo@2.0.9:
     optionalDependencies:
-      turbo-darwin-64: 2.0.7
-      turbo-darwin-arm64: 2.0.7
-      turbo-linux-64: 2.0.7
-      turbo-linux-arm64: 2.0.7
-      turbo-windows-64: 2.0.7
-      turbo-windows-arm64: 2.0.7
+      turbo-darwin-64: 2.0.9
+      turbo-darwin-arm64: 2.0.9
+      turbo-linux-64: 2.0.9
+      turbo-linux-arm64: 2.0.9
+      turbo-windows-64: 2.0.9
+      turbo-windows-arm64: 2.0.9
 
   type-fest@0.21.3: {}
 

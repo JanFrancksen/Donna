@@ -1,15 +1,9 @@
+import { UserMenu } from '@repo/ui/UserMenu/UserMenu';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
-import { UserMenu } from '@repo/ui/UserMenu/UserMenu';
-import { Suspense } from 'react';
 import { env } from '~/env';
 import { AuthShowcase } from './_components/auth-showcase';
-import {
-	CreatePostForm,
-	PostCardSkeleton,
-	PostList,
-} from './_components/posts';
+import './globals.css';
 import { TRPCReactProvider } from './trpc/react';
 import { api } from './trpc/server';
 
@@ -49,7 +43,7 @@ export default function RootLayout({
 	const posts = api.post.all();
 
 	return (
-		<html lang='de'>
+		<html lang='de' data-theme='dark'>
 			<TRPCReactProvider>
 				<body className={inter.className}>
 					<UserMenu />
@@ -58,10 +52,10 @@ export default function RootLayout({
 							<AuthShowcase />
 						</div>
 					</header>
-					<main className='flex min-h-screen flex-col items-center justify-center bg-slate-950'>
+					<main className='flex min-h-screen flex-col items-center justify-center bg-background-strong'>
 						{children}
 
-						<CreatePostForm />
+						{/* <CreatePostForm />
 						<div className='h-[40vh] w-full max-w-2xl overflow-y-scroll'>
 							<Suspense
 								fallback={
@@ -74,7 +68,7 @@ export default function RootLayout({
 							>
 								<PostList posts={posts} />
 							</Suspense>
-						</div>
+						</div> */}
 					</main>
 				</body>
 			</TRPCReactProvider>

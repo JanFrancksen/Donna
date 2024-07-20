@@ -217,6 +217,9 @@ importers:
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
+      framer-motion:
+        specifier: ^11.3.7
+        version: 11.3.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
         specifier: ^0.408.0
         version: 0.408.0(react@18.3.1)
@@ -2044,6 +2047,20 @@ packages:
   foreground-child@3.2.1:
     resolution: {integrity: sha512-PXUUyLqrR2XCWICfv6ukppP96sdFwWbNEnfEMt7jNsISjMsvaLNinAHNDYyvkyU+SZG2BTSbT5NjG+vZslfGTA==}
     engines: {node: '>=14'}
+
+  framer-motion@11.3.7:
+    resolution: {integrity: sha512-wolMesg8ruYgZX8nMELY2a/ZgMMpYhggLNIexx1blaYN0yb2+SdQ78sEkGDKde+3LTCeFy/wCi97i5Br4yT0GQ==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fs-extra@10.1.0:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
@@ -5320,6 +5337,13 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
+
+  framer-motion@11.3.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      tslib: 2.6.3
+    optionalDependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   fs-extra@10.1.0:
     dependencies:

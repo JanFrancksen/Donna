@@ -6,31 +6,35 @@
 
 @layer base {
   .focus-state {
-@apply outline outline-blue-600 outline-offset-2 dark:outline-blue-500 forced-colors:outline-[Highlight] focus:outline-2 outline-0
+    @apply outline outline-blue-600 outline-offset-2 dark:outline-blue-500 forced-colors:outline-[Highlight] focus:outline-2 outline-0
   };
   
-    :root {
-        --color-primary: #1a202c;
-        --color-primary-strong: #2d3748;
-        --color-primary-weak: #4a5568;
-        --color-accent: #ed64a6;
-        --color-accent-strong: #d53f8c;
-        --color-accent-weak: #b83280;
-        --color-background: #f7fafc;
-        --color-text: #2d3748;
-        --color-border: #e2e8f0;
-      }
-      
+  :root {
+    --brand-weak: 15 100% 92%; /* orange-100 */
+    --brand: 14 100% 62%; /* orange-500 */
+    --brand-strong: 14 100% 50%; /* orange-600 */
+    --accent: 171 72% 72%; /* teal-500 */
+    --background-weak: 0 0% 100%; /* white */
+    --background-strong: 195 29% 97%; /* gray-100 */
+    --stroke-weak: 190 11% 89%; /* gray-300 */
+    --stroke-strong: 187 10% 82%; /* gray-500 */
+    --body-weak: 187 10% 49%; /* gray-700 */
+    --body: 187 10% 33%; /* gray-800 */
+    --body-strong: 188 100% 9%; /* gray-900 */
+  }
+
       [data-theme="dark"] {
-        --color-primary: #f7fafc;
-        --color-primary-strong: #e2e8f0;
-        --color-primary-weak: #cbd5e0;
-        --color-accent: #d53f8c;
-        --color-accent-strong: #b83280;
-        --color-accent-weak: #97266d;
-        --color-background: #1a202c;
-        --color-text: #f7fafc;
-        --color-border: #4a5568;
-      }
-      
+    --brand-weak: 15 100% 12%; /* orange-900 */
+    --brand: 14 100% 70%; /* orange-400 */
+    --brand-strong: 14 100% 77%; /* orange-300 */
+    --accent: 171 71% 78%; /* teal-400 */
+    --background-weak: 187 10% 33%; /* gray-800 */
+    --background-strong: 188 100% 9%; /* gray-900 */
+    --stroke-weak: 187 10% 49%; /* gray-700 */
+    --stroke-strong: 187 9% 65%; /* gray-600 */
+    --body-weak: 187 10% 82%; /* gray-500 */
+    --body: 190 11% 89%; /* gray-300 */
+    --body-strong: 195 29% 97%; /* gray-100 */
+    --destructive: 0, 70%, 50%;
+  }
   }

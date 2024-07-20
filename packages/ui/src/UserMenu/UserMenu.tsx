@@ -2,7 +2,7 @@
 
 import { MenuTrigger } from 'react-aria-components';
 import { Button } from '../Button/Button';
-import { Menu, MenuItem } from '../examples/Menu';
+import { Menu, MenuItem } from '../Menu/Menu';
 
 export function UserMenu() {
 	return (

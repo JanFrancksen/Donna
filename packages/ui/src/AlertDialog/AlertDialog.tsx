@@ -1,3 +1,6 @@
+'use client';
+
+import { cx } from 'class-variance-authority';
 import { AlertCircleIcon, InfoIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { chain } from 'react-aria';
@@ -34,7 +37,10 @@ export function AlertDialog({
 						{title}
 					</Heading>
 					<div
-						className={`absolute top-6 right-6 h-6 w-6 stroke-2 ${variant === 'destructive' ? 'text-red-500' : 'text-blue-500'}`}
+						className={cx(
+							'absolute top-6 right-6 h-6 w-6 stroke-2',
+							variant === 'destructive' ? 'text-red-500' : 'text-brand'
+						)}
 					>
 						{variant === 'destructive' ? (
 							<AlertCircleIcon aria-hidden />

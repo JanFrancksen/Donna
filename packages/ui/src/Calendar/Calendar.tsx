@@ -1,4 +1,3 @@
-import { cva } from 'class-variance-authority';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
 	Calendar as AriaCalendar,
@@ -15,22 +14,6 @@ import {
 } from 'react-aria-components';
 import { Button } from '../Button/Button';
 
-const cellStyles = cva(
-	'flex h-9 w-9 cursor-default items-center justify-center rounded-full text-sm forced-color-adjust-none',
-	{
-		variants: {
-			isSelected: {
-				false:
-					'pressed:bg-gray-200 text-zinc-900 hover:bg-gray-100 dark:pressed:bg-zinc-600 dark:text-zinc-200 dark:hover:bg-zinc-700',
-				true: 'bg-blue-600 text-white invalid:bg-red-600 forced-colors:bg-[Highlight] forced-colors:text-[HighlightText] forced-colors:invalid:bg-[Mark]',
-			},
-			isDisabled: {
-				true: 'text-gray-300 dark:text-zinc-600 forced-colors:text-[GrayText]',
-			},
-		},
-	}
-);
-
 export interface CalendarProps<T extends DateValue>
 	extends Omit<AriaCalendarProps<T>, 'visibleDuration'> {
 	errorMessage?: string;
@@ -41,16 +24,21 @@ export function Calendar<T extends DateValue>({
 	...props
 }: CalendarProps<T>) {
 	return (
-		<AriaCalendar {...props}>
+		<AriaCalendar {...props} className='flex w-80 flex-col'>
 			<CalendarHeader />
 			<CalendarGrid>
 				<CalendarGridHeader />
 				<CalendarGridBody>
-					{(date) => <CalendarCell date={date} className={cellStyles} />}
+					{(date) => (
+						<CalendarCell
+							date={date}
+							className='focus-state flex size-9 cursor-default items-center justify-center rounded-full selected:bg-brand selected:text-text-strong text-sm transition-colors forced-color-adjust-none invalid:bg-destructive hover:bg-brand-weak disabled:text-stroke-weak forced-colors:bg-[Highlight] forced-colors:text-[HighlightText] disabled:forced-colors:text-[GrayText] forced-colors:invalid:bg-[Mark]'
+						/>
+					)}
 				</CalendarGridBody>
 			</CalendarGrid>
 			{errorMessage && (
-				<Text slot='errorMessage' className='text-red-600 text-sm'>
+				<Text slot='errorMessage' className='text-sm text-text'>
 					{errorMessage}
 				</Text>
 			)}
@@ -63,15 +51,15 @@ export function CalendarHeader() {
 
 	return (
 		<header className='flex w-full items-center gap-1 px-1 pb-4'>
-			<Button variant='icon' slot='previous'>
+			<Button slot='previous'>
 				{direction === 'rtl' ? (
 					<ChevronRight aria-hidden />
 				) : (
 					<ChevronLeft aria-hidden />
 				)}
 			</Button>
-			<Heading className='mx-2 flex-1 text-center font-semibold text-xl text-zinc-900 dark:text-zinc-200' />
-			<Button variant='icon' slot='next'>
+			<Heading className='mx-2 flex-1 text-center font-semibold text-brand text-lg' />
+			<Button slot='next'>
 				{direction === 'rtl' ? (
 					<ChevronLeft aria-hidden />
 				) : (
@@ -86,7 +74,7 @@ export function CalendarGridHeader() {
 	return (
 		<AriaCalendarGridHeader>
 			{(day) => (
-				<CalendarHeaderCell className='font-semibold text-gray-500 text-xs'>
+				<CalendarHeaderCell className='font-semibold text-text text-xs'>
 					{day}
 				</CalendarHeaderCell>
 			)}

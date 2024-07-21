@@ -1,12 +1,12 @@
 import { type VariantProps, cva } from 'class-variance-authority';
 
 export const buttonStyles = cva(
-	'relative flex items-center justify-center overflow-hidden rounded-lg font-poppins font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed',
+	'focus-state relative flex items-center justify-center overflow-hidden rounded-lg font-poppins font-semibold transition-colors disabled:pointer-events-none disabled:cursor-not-allowed',
 	{
 		variants: {
 			variant: {
 				primary: 'bg-brand text-white hover:bg-brand-strong',
-				destructive: 'bg-red-600 text-white hover:bg-red-400',
+				destructive: 'bg-destructive text-text hover:bg-destructive-weak',
 				secondary: '',
 				ghost: '',
 				clear: '',
@@ -23,8 +23,8 @@ export const buttonStyles = cva(
 				true: 'w-full',
 			},
 			isInverted: {
-				true: 'disabled:bg-body disabled:text-stroke-strong',
-				false: 'disabled:bg-stroke-weak/75 disabled:text-body/75',
+				true: 'disabled:bg-text disabled:text-stroke-strong',
+				false: 'disabled:bg-stroke-weak/75 disabled:text-text/75',
 			},
 		},
 		compoundVariants: [
@@ -32,34 +32,34 @@ export const buttonStyles = cva(
 				variant: 'secondary',
 				isInverted: false,
 				className:
-					'border border-stroke-weak bg-background-weak text-body-strong hover:border-stroke-strong hover:bg-background-strong/75',
+					'border border-stroke-weak bg-background-weak text-text-strong hover:border-stroke-strong hover:bg-background-strong/75',
 			},
 			{
 				variant: 'secondary',
 				isInverted: true,
 				className:
-					'border border-background-weak bg-body-strong text-white hover:bg-body',
+					'border border-background-weak bg-text-strong text-white hover:bg-text',
 			},
 			{
 				variant: 'ghost',
 				isInverted: false,
 				className:
-					'bg-background-strong text-body-strong hover:bg-stroke-weak/75',
+					'bg-background-strong text-text-strong hover:bg-stroke-weak/75',
 			},
 			{
 				variant: 'ghost',
 				isInverted: true,
-				className: 'bg-body/75 text-white hover:bg-body',
+				className: 'bg-text/75 text-white hover:bg-text',
 			},
 			{
 				variant: 'clear',
 				isInverted: false,
-				className: 'text-body-strong hover:bg-background-strong/75',
+				className: 'text-text-strong hover:bg-background-strong/75',
 			},
 			{
 				variant: 'clear',
 				isInverted: true,
-				className: 'text-white hover:bg-body/50',
+				className: 'text-white hover:bg-text/50',
 			},
 			{
 				size: 'xs',
@@ -114,40 +114,40 @@ export const buttonLoadingIndicatorStyles = cva(
 				clear: '',
 			},
 			isInverted: {
-				true: 'disabled:bg-body disabled:text-stroke-strong',
-				false: 'disabled:bg-stroke-weak/75 disabled:text-body/75',
+				true: 'disabled:bg-text disabled:text-stroke-strong',
+				false: 'disabled:bg-stroke-weak/75 disabled:text-text/75',
 			},
 		},
 		compoundVariants: [
 			{
 				variant: 'secondary',
 				isInverted: false,
-				className: 'bg-background-weak text-body-strong',
+				className: 'bg-background-weak text-text-strong',
 			},
 			{
 				variant: 'secondary',
 				isInverted: true,
-				className: 'bg-body-strong text-white',
+				className: 'bg-text-strong text-white',
 			},
 			{
 				variant: 'ghost',
 				isInverted: false,
-				className: 'bg-background-strong text-body-strong',
+				className: 'bg-background-strong text-text-strong',
 			},
 			{
 				variant: 'ghost',
 				isInverted: true,
-				className: 'bg-body text-white',
+				className: 'bg-text text-white',
 			},
 			{
 				variant: 'clear',
 				isInverted: false,
-				className: 'bg-background-weak text-body-strong',
+				className: 'bg-background-weak text-text-strong',
 			},
 			{
 				variant: 'clear',
 				isInverted: true,
-				className: 'bg-body-strong text-white',
+				className: 'bg-text-strong text-white',
 			},
 		],
 		defaultVariants: {

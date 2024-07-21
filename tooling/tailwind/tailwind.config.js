@@ -5,18 +5,35 @@ module.exports = {
 		extend: {
 			colors: {
 				brand: {
-					weak: 'hsla(var(--color-primary-weak) / <alpha-value>)',
-					DEFAULT: 'hsla(var(--color-primary) / <alpha-value>)',
-					strong: 'hsla(var(--color-primary-strong) / <alpha-value>)',
+					weak: 'hsla(var(--brand-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--brand) / <alpha-value>)',
+					strong: 'hsla(var(--brand-strong) / <alpha-value>)',
 				},
 				accent: {
-					weak: 'var(--color-accent-weak)',
-					DEFAULT: 'var(--color-accent)',
-					strong: 'var(--color-accent-strong)',
+					weak: 'hsla(var(--accent-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--accent) / <alpha-value>)',
+					strong: 'hsla(var(--accent-strong) / <alpha-value>)',
 				},
-				background: 'var(--color-background)',
-				text: 'var(--color-text)',
-				border: 'var(--color-border)',
+				background: {
+					weak: 'hsla(var(--background-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--background) / <alpha-value>)',
+					strong: 'hsla(var(--background-strong) / <alpha-value>)',
+				},
+				text: {
+					weak: 'hsla(var(--text-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--text) / <alpha-value>)',
+					strong: 'hsla(var(--text-strong) / <alpha-value>)',
+				},
+				stroke: {
+					weak: 'hsla(var(--stroke-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--stroke) / <alpha-value>)',
+					strong: 'hsla(var(--stroke-strong) / <alpha-value>)',
+				},
+				destructive: {
+					weak: 'hsla(var(--destructive-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--destructive) / <alpha-value>)',
+					strong: 'hsla(var(--destructive-strong) / <alpha-value>)',
+				},
 			},
 		},
 	},

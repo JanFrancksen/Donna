@@ -43,7 +43,7 @@ export default function RootLayout({
 	const posts = api.post.all();
 
 	return (
-		<html lang='de' data-theme='dark'>
+		<html lang='de' className='dark'>
 			<TRPCReactProvider>
 				<body className={inter.className}>
 					<UserMenu />
@@ -52,7 +52,7 @@ export default function RootLayout({
 							<AuthShowcase />
 						</div>
 					</header>
-					<main className='flex min-h-screen flex-col items-center justify-center bg-background-strong'>
+					<main className='flex min-h-screen flex-col items-center justify-center bg-background'>
 						{children}
 
 						{/* <CreatePostForm />

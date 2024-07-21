@@ -1,13 +1,10 @@
 'use client';
-import { Breadcrumb, Breadcrumbs } from '@repo/ui/Breadcrumb/Breadcrumbs';
+import { Calendar } from '@repo/ui/Calendar/Calendar';
 
 function TestPage() {
 	return (
 		<div className='text-white'>
-			<Breadcrumbs>
-				<Breadcrumb href='/'>Test</Breadcrumb>
-				<Breadcrumb>Test</Breadcrumb>
-			</Breadcrumbs>
+			<Calendar aria-label='Event date' />
 		</div>
 	);
 }

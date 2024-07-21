@@ -7,23 +7,34 @@ export default {
 		extend: {
 			colors: {
 				brand: {
-					weak: 'hsl(var(--brand-weak) / <alpha-value>)',
-					DEFAULT: 'hsl(var(--brand) / <alpha-value>)',
-					strong: 'hsl(var(--brand-strong) / <alpha-value>)',
+					weak: 'hsla(var(--brand-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--brand) / <alpha-value>)',
+					strong: 'hsla(var(--brand-strong) / <alpha-value>)',
 				},
-				accent: 'hsl(var(--accent) / <alpha-value>)',
-				body: {
-					weak: 'hsl(var(--body-weak) / <alpha-value>)',
-					DEFAULT: 'hsl(var(--body) / <alpha-value>)',
-					strong: 'hsl(var(--body-strong) / <alpha-value>)',
-				},
-				stroke: {
-					weak: 'hsl(var(--stroke-weak) / <alpha-value>)',
-					strong: 'hsl(var(--stroke-strong) / <alpha-value>)',
+				accent: {
+					weak: 'hsla(var(--accent-weak) / <alpha-value)',
+					DEFAULT: 'hsla(var(--accent) / <alpha-value)',
+					strong: 'hsla(var(--accent-strong) / <alpha-value)',
 				},
 				background: {
-					weak: 'hsl(var(--background-weak) / <alpha-value>)',
-					strong: 'hsl(var(--background-strong) / <alpha-value>)',
+					weak: 'hsla(var(--background-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--background) / <alpha-value>)',
+					strong: 'hsla(var(--background-strong) / <alpha-value>)',
+				},
+				text: {
+					weak: 'hsla(var(--text-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--text) / <alpha-value>)',
+					strong: 'hsla(var(--text-strong) / <alpha-value>)',
+				},
+				stroke: {
+					weak: 'hsla(var(--stroke-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--stroke) / <alpha-value>)',
+					strong: 'hsla(var(--stroke-strong) / <alpha-value>)',
+				},
+				destructive: {
+					weak: 'hsla(var(--destructive-weak) / <alpha-value>)',
+					DEFAULT: 'hsla(var(--destructive) / <alpha-value>)',
+					strong: 'hsla(var(--destructive-strong) / <alpha-value>)',
 				},
 			},
 		},

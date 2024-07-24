@@ -1,10 +1,13 @@
 'use client';
-import { Calendar } from '@repo/ui/Calendar/Calendar';
+import { Checkbox } from '@repo/ui/Checkbox/Checkbox';
 
 function TestPage() {
 	return (
 		<div className='text-white'>
-			<Calendar aria-label='Event date' />
+			<Checkbox>Test</Checkbox>
+			<Checkbox isDisabled isSelected>
+				Test
+			</Checkbox>
 		</div>
 	);
 }

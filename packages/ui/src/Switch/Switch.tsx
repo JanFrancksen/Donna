@@ -48,10 +48,10 @@ export function Switch({ children, ...props }: SwitchProps) {
 				'group flex items-center gap-2 text-gray-800 text-sm transition disabled:text-gray-300 dark:text-zinc-200 dark:disabled:text-zinc-600 forced-colors:disabled:text-[GrayText]'
 			)}
 		>
-			{(renderProps) => (
+			{() => (
 				<>
-					<div className={track(renderProps)}>
-						<span className={handle(renderProps)} />
+					<div className={track()}>
+						<span className={handle()} />
 					</div>
 					{children}
 				</>

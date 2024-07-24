@@ -1,13 +1,16 @@
 'use client';
-import { Checkbox } from '@repo/ui/Checkbox/Checkbox';
+import { ComboBox, ComboBoxItem } from '@repo/ui/ComboBox/ComboBox';
 
 function TestPage() {
 	return (
 		<div className='text-white'>
-			<Checkbox>Test</Checkbox>
-			<Checkbox isDisabled isSelected>
-				Test
-			</Checkbox>
+			<ComboBox>
+				<ComboBoxItem>Test</ComboBoxItem>
+				<ComboBoxItem>Test</ComboBoxItem>
+				<ComboBoxItem>Test</ComboBoxItem>
+				<ComboBoxItem>Rahdan</ComboBoxItem>
+				<ComboBoxItem>test 3</ComboBoxItem>
+			</ComboBox>
 		</div>
 	);
 }

@@ -21,7 +21,6 @@ import {
 	type DropdownSectionProps,
 } from '../ListBox/ListBox';
 import { Popover } from '../Popover/Popover';
-import { composeTailwindRenderProps } from '../examples/utils';
 
 export interface ComboBoxProps<T extends object>
 	extends Omit<AriaComboBoxProps<T>, 'children'> {
@@ -40,18 +39,12 @@ export function ComboBox<T extends object>({
 	...props
 }: ComboBoxProps<T>) {
 	return (
-		<AriaComboBox
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex flex-col gap-1'
-			)}
-		>
+		<AriaComboBox {...props} className='group flex flex-col gap-1'>
 			<Label>{label}</Label>
 			<FieldGroup>
 				<Input />
-				<Button variant='icon' className='mr-1 w-6 rounded outline-offset-0 '>
-					<ChevronDown aria-hidden className='h-4 w-4' />
+				<Button variant='clear'>
+					<ChevronDown aria-hidden className='size-4' />
 				</Button>
 			</FieldGroup>
 			{description && <Description>{description}</Description>}
@@ -59,7 +52,7 @@ export function ComboBox<T extends object>({
 			<Popover className='w-[--trigger-width]'>
 				<ListBox
 					items={items}
-					className='max-h-[inherit] overflow-auto p-1 outline-0 [clip-path:inset(0_0_0_0_round_.75rem)]'
+					className='max-h-[inherit] overflow-auto p-1 outline-0'
 				>
 					{children}
 				</ListBox>

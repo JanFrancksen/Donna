@@ -1,10 +1,10 @@
 'use client';
-import { DateField } from '@repo/ui/DateField/DateField';
+import { DatePicker } from '@repo/ui/DatePicker/DatePicker';
 
 function TestPage() {
 	return (
 		<div className='text-white'>
-			<DateField isDisabled />
+			<DatePicker />
 		</div>
 	);
 }

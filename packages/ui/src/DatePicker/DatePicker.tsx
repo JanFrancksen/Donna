@@ -11,7 +11,6 @@ import { DateInput } from '../DateField/DateField';
 import { Dialog } from '../Dialog/Dialog';
 import { Description, FieldError, FieldGroup, Label } from '../Field/Field';
 import { Popover } from '../Popover/Popover';
-import { composeTailwindRenderProps } from '../examples/utils';
 
 export interface DatePickerProps<T extends DateValue>
 	extends AriaDatePickerProps<T> {
@@ -27,18 +26,12 @@ export function DatePicker<T extends DateValue>({
 	...props
 }: DatePickerProps<T>) {
 	return (
-		<AriaDatePicker
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex flex-col gap-1'
-			)}
-		>
+		<AriaDatePicker {...props} className='group space-y-1'>
 			{label && <Label>{label}</Label>}
-			<FieldGroup className='w-auto min-w-[208px]'>
-				<DateInput className='min-w-[150px] flex-1 px-2 py-1.5 text-sm' />
-				<Button variant='icon' className='mr-1 w-6 rounded outline-offset-0'>
-					<CalendarIcon aria-hidden className='h-4 w-4' />
+			<FieldGroup className='w-auto min-w-52'>
+				<DateInput className='flex min-w-32 flex-1 px-3 py-2 text-sm' />
+				<Button variant='clear'>
+					<CalendarIcon aria-hidden className='size-4 text-foreground' />
 				</Button>
 			</FieldGroup>
 			{description && <Description>{description}</Description>}

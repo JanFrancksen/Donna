@@ -15,6 +15,7 @@
 		"@repo/api": "workspace:*",
 		"@repo/db": "workspace:*",
 		"@repo/ui": "workspace:*",
+		"@repo/posthog": "workspace:*",
 		"@repo/validators": "workspace:*",
 		"@supabase/auth-helpers-nextjs": "^0.10.0",
 		"@supabase/supabase-js": "^2.44.4",
@@ -30,8 +31,8 @@
 	},
 	"devDependencies": {
 		"@repo/tailwind-config": "workspace:*",
-		"@repo/types": "workspace:*",
 		"@repo/tsconfig": "workspace:*",
+		"@repo/types": "workspace:*",
 		"@types/node": "^20.14.12",
 		"@types/react": "catalog:react18",
 		"@types/react-dom": "catalog:react18",

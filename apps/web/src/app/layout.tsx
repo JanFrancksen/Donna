@@ -1,3 +1,5 @@
+import { PostHogPageView } from '@repo/posthog/PostHogPageView';
+import { CSPostHogProvider } from '@repo/posthog/PostHogProvider';
 import { UserMenu } from '@repo/ui/UserMenu/UserMenu';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
@@ -44,18 +46,20 @@ export default function RootLayout({
 
 	return (
 		<html lang='de' className='dark'>
-			<TRPCReactProvider>
-				<body className={inter.className}>
-					<UserMenu />
-					<header>
-						<div className='fixed top-2 right-2'>
-							<AuthShowcase />
-						</div>
-					</header>
-					<main className='flex min-h-screen flex-col items-center justify-center bg-background'>
-						{children}
+			<CSPostHogProvider>
+				<TRPCReactProvider>
+					<body className={inter.className}>
+						<PostHogPageView />
+						<UserMenu />
+						<header>
+							<div className='fixed top-2 right-2'>
+								<AuthShowcase />
+							</div>
+						</header>
+						<main className='flex min-h-screen flex-col items-center justify-center bg-background'>
+							{children}
 
-						{/* <CreatePostForm />
+							{/* <CreatePostForm />
 						<div className='h-[40vh] w-full max-w-2xl overflow-y-scroll'>
 							<Suspense
 								fallback={
@@ -69,9 +73,10 @@ export default function RootLayout({
 								<PostList posts={posts} />
 							</Suspense>
 						</div> */}
-					</main>
-				</body>
-			</TRPCReactProvider>
+						</main>
+					</body>
+				</TRPCReactProvider>
+			</CSPostHogProvider>
 		</html>
 	);
 }

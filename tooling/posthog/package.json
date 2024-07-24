@@ -1,0 +1,27 @@
+{
+	"name": "@repo/posthog",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		"./PostHogPageView": "./src/PostHogPageView.tsx",
+		"./PostHogProvider": "./src/PostHogProvider.tsx",
+		"./*": ["./src/*.tsx", "./src/*.ts"]
+	},
+	"license": "MIT",
+	"scripts": {
+		"clean": "git clean -xdf .next .turbo node_modules",
+		"typecheck": "tsc --noEmit",
+		"with-env": "dotenv -e ../../.env --"
+	},
+	"dependencies": {
+		"posthog-js": "^1.149.1",
+		"react": "catalog:react18",
+		"@t3-oss/env-core": "^0.11.0"
+	},
+	"devDependencies": {
+		"@repo/tsconfig": "workspace:*",
+		"typescript": "catalog:",
+		"dotenv-cli": "^7.4.2"
+	}
+}

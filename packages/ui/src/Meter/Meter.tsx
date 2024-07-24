@@ -3,8 +3,7 @@ import {
 	Meter as AriaMeter,
 	type MeterProps as AriaMeterProps,
 } from 'react-aria-components';
-import { Label } from '../Field/Field';
-import { composeTailwindRenderProps } from '../examples/utils';
+import { Label } from '../Label/Label';
 
 export interface MeterProps extends AriaMeterProps {
 	label?: string;
@@ -12,19 +11,13 @@ export interface MeterProps extends AriaMeterProps {
 
 export function Meter({ label, ...props }: MeterProps) {
 	return (
-		<AriaMeter
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'flex flex-col gap-1'
-			)}
-		>
+		<AriaMeter {...props} className='flex flex-col gap-1'>
 			{({ percentage, valueText }) => (
 				<>
 					<div className='flex justify-between gap-2'>
 						<Label>{label}</Label>
 						<span
-							className={`text-sm ${percentage >= 80 ? 'text-red-600 dark:text-red-500' : 'text-gray-600 dark:text-zinc-400'}`}
+							className={`text-sm ${percentage >= 80 ? 'text-destructive' : 'text-text'}`}
 						>
 							{percentage >= 80 && (
 								<AlertTriangle

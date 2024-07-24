@@ -19,9 +19,7 @@ import {
 	composeRenderProps,
 	useTableOptions,
 } from 'react-aria-components';
-import { twMerge } from 'tailwind-merge';
 import { Checkbox } from '../Checkbox/Checkbox';
-import { composeTailwindRenderProps } from '../examples/utils';
 
 export function Table(props: TableProps) {
 	return (
@@ -43,10 +41,7 @@ export function Column(props: ColumnProps) {
 	return (
 		<AriaColumn
 			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'cursor-default text-start font-semibold text-gray-700 text-sm dark:text-zinc-300 [&:focus-within]:z-20 [&:hover]:z-20'
-			)}
+			className='cursor-default text-start font-semibold text-gray-700 text-sm dark:text-zinc-300 [&:focus-within]:z-20 [&:hover]:z-20'
 		>
 			{composeRenderProps(
 				props.children,
@@ -84,10 +79,7 @@ export function TableHeader<T extends object>(props: TableHeaderProps<T>) {
 	return (
 		<AriaTableHeader
 			{...props}
-			className={twMerge(
-				'sticky top-0 z-10 rounded-t-lg border-b bg-gray-100/60 backdrop-blur-md supports-[-moz-appearance:none]:bg-gray-100 dark:border-b-zinc-700 dark:bg-zinc-700/60 dark:supports-[-moz-appearance:none]:bg-zinc-700 forced-colors:bg-[Canvas]',
-				props.className
-			)}
+			className='sticky top-0 z-10 rounded-t-lg border-b bg-gray-100/60 backdrop-blur-md supports-[-moz-appearance:none]:bg-gray-100 dark:border-b-zinc-700 dark:bg-zinc-700/60 dark:supports-[-moz-appearance:none]:bg-zinc-700 forced-colors:bg-[Canvas]'
 		>
 			{/* Add extra columns for drag and drop and selection. */}
 			{allowsDragging && <Column />}

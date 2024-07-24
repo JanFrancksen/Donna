@@ -7,7 +7,6 @@ import {
 	type GridListProps,
 } from 'react-aria-components';
 import { Checkbox } from '../Checkbox/Checkbox';
-import { composeTailwindRenderProps } from '../examples/utils';
 
 export function GridList<T extends object>({
 	children,
@@ -16,10 +15,7 @@ export function GridList<T extends object>({
 	return (
 		<AriaGridList
 			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'relative overflow-auto rounded-lg border dark:border-zinc-600'
-			)}
+			className='relative overflow-auto rounded-lg border dark:border-zinc-600'
 		>
 			{children}
 		</AriaGridList>

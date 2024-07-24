@@ -9,7 +9,8 @@ import { Button } from '../Button/Button';
 import { Calendar } from '../Calendar/Calendar';
 import { DateInput } from '../DateField/DateField';
 import { Dialog } from '../Dialog/Dialog';
-import { Description, FieldError, FieldGroup, Label } from '../Field/Field';
+import { Description, FieldError, FieldGroup } from '../Field/Field';
+import { Label } from '../Label/Label';
 import { Popover } from '../Popover/Popover';
 
 export interface DatePickerProps<T extends DateValue>

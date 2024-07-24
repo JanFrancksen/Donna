@@ -8,10 +8,9 @@ import {
 	Description,
 	FieldError,
 	Input,
-	Label,
 	fieldBorderStyles,
 } from '../Field/Field';
-import { composeTailwindRenderProps } from '../examples/utils';
+import { Label } from '../Label/Label';
 
 const inputStyles = cx('rounded-md border-2', fieldBorderStyles);
 
@@ -28,13 +27,7 @@ export function TextField({
 	...props
 }: TextFieldProps) {
 	return (
-		<AriaTextField
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'flex flex-col gap-1'
-			)}
-		>
+		<AriaTextField {...props} className='flex flex-col gap-1'>
 			{label && <Label>{label}</Label>}
 			<Input className={inputStyles} />
 			{description && <Description>{description}</Description>}

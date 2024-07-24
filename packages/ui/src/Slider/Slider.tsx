@@ -6,8 +6,7 @@ import {
 	SliderThumb,
 	SliderTrack,
 } from 'react-aria-components';
-import { Label } from '../Field/Field';
-import { composeTailwindRenderProps } from '../examples/utils';
+import { Label } from '../Label/Label';
 
 const trackStyles = cva('rounded-full', {
 	variants: {
@@ -49,10 +48,7 @@ export function Slider<T extends number | number[]>({
 	return (
 		<AriaSlider
 			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'orientation-vertical:flex orientation-horizontal:grid orientation-horizontal:w-64 grid-cols-[1fr_auto] flex-col items-center gap-2'
-			)}
+			className='orientation-vertical:flex orientation-horizontal:grid orientation-horizontal:w-64 grid-cols-[1fr_auto] flex-col items-center gap-2'
 		>
 			<Label>{label}</Label>
 			<SliderOutput className='orientation-vertical:hidden font-medium text-gray-500 text-sm dark:text-zinc-400'>

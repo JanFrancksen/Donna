@@ -7,8 +7,8 @@ import {
 	type RadioProps,
 	type ValidationResult,
 } from 'react-aria-components';
-import { Description, FieldError, Label } from '../Field/Field';
-import { composeTailwindRenderProps } from '../examples/utils';
+import { Description, FieldError } from '../Field/Field';
+import { Label } from '../Label/Label';
 
 export interface RadioGroupProps extends Omit<RACRadioGroupProps, 'children'> {
 	label?: string;
@@ -19,13 +19,7 @@ export interface RadioGroupProps extends Omit<RACRadioGroupProps, 'children'> {
 
 export function RadioGroup(props: RadioGroupProps) {
 	return (
-		<RACRadioGroup
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex flex-col gap-2'
-			)}
-		>
+		<RACRadioGroup {...props} className='group flex flex-col gap-2'>
 			<Label>{props.label}</Label>
 			<div className='flex gap-2 group-orientation-vertical:flex-col group-orientation-horizontal:gap-4'>
 				{props.children}
@@ -59,10 +53,7 @@ export function Radio(props: RadioProps) {
 	return (
 		<RACRadio
 			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex items-center gap-2 text-gray-800 text-sm transition disabled:text-gray-300 dark:text-zinc-200 dark:disabled:text-zinc-600 forced-colors:disabled:text-[GrayText]'
-			)}
+			className='group flex items-center gap-2 text-gray-800 text-sm transition disabled:text-gray-300 dark:text-zinc-200 dark:disabled:text-zinc-600 forced-colors:disabled:text-[GrayText]'
 		>
 			{(renderProps) => (
 				<>

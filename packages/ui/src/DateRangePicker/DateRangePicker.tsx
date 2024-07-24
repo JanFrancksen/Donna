@@ -8,10 +8,10 @@ import {
 import { Button } from '../Button/Button';
 import { DateInput } from '../DateField/DateField';
 import { Dialog } from '../Dialog/Dialog';
-import { Description, FieldError, FieldGroup, Label } from '../Field/Field';
+import { Description, FieldError, FieldGroup } from '../Field/Field';
+import { Label } from '../Label/Label';
 import { Popover } from '../Popover/Popover';
 import { RangeCalendar } from '../RangeCalendar/RangeCalendar';
-import { composeTailwindRenderProps } from '../examples/utils';
 
 export interface DateRangePickerProps<T extends DateValue>
 	extends AriaDateRangePickerProps<T> {
@@ -27,13 +27,7 @@ export function DateRangePicker<T extends DateValue>({
 	...props
 }: DateRangePickerProps<T>) {
 	return (
-		<AriaDateRangePicker
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex flex-col gap-1'
-			)}
-		>
+		<AriaDateRangePicker {...props} className='group flex flex-col gap-1'>
 			{label && <Label>{label}</Label>}
 			<FieldGroup className='w-auto min-w-64'>
 				<DateInput slot='start' className='flex px-2 py-1.5 text-sm' />

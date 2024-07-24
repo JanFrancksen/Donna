@@ -7,7 +7,8 @@ import {
 	type DateValue,
 	type ValidationResult,
 } from 'react-aria-components';
-import { Description, FieldError, Label } from '../Field/Field';
+import { Description, FieldError } from '../Field/Field';
+import { Label } from '../Label/Label';
 
 export interface DateFieldProps<T extends DateValue>
 	extends AriaDateFieldProps<T> {

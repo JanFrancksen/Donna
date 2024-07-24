@@ -1,10 +1,10 @@
 'use client';
-import { DateRangePicker } from '@repo/ui/DateRangePicker/DateRangePicker';
+import { ProgressBar } from '@repo/ui/ProgressBar/ProgressBar';
 
 function TestPage() {
 	return (
 		<div className='text-white'>
-			<DateRangePicker />
+			<ProgressBar value={30} label='Test' />
 		</div>
 	);
 }

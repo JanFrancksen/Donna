@@ -68,7 +68,6 @@ export function RangeCalendar<T extends DateValue>({
 													? 'middle'
 													: 'none',
 										isDisabled,
-										isFocusVisible,
 									})}
 								>
 									{formattedDate}

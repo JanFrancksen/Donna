@@ -10,14 +10,14 @@ import {
 	SelectValue,
 	type ValidationResult,
 } from 'react-aria-components';
-import { Description, FieldError, Label } from '../Field/Field';
+import { Description, FieldError } from '../Field/Field';
+import { Label } from '../Label/Label';
 import {
 	DropdownItem,
 	DropdownSection,
 	type DropdownSectionProps,
 } from '../ListBox/ListBox';
 import { Popover } from '../Popover/Popover';
-import { composeTailwindRenderProps } from '../examples/utils';
 
 const styles = cva(
 	'flex w-full min-w-[150px] cursor-default items-center gap-4 rounded-lg border border-black/10 bg-gray-50 py-2 pr-2 pl-3 text-start shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] transition dark:border-white/10 dark:bg-zinc-700 dark:shadow-none',
@@ -50,13 +50,7 @@ export function Select<T extends object>({
 	...props
 }: SelectProps<T>) {
 	return (
-		<AriaSelect
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex flex-col gap-1'
-			)}
-		>
+		<AriaSelect {...props} className='group flex flex-col gap-1'>
 			{label && <Label>{label}</Label>}
 			<Button className={styles}>
 				<SelectValue className='flex-1 text-sm placeholder-shown:italic' />

@@ -8,13 +8,8 @@ import {
 	type ValidationResult,
 } from 'react-aria-components';
 import { Button } from '../Button/Button';
-import {
-	Description,
-	FieldError,
-	FieldGroup,
-	Input,
-	Label,
-} from '../Field/Field';
+import { Description, FieldError, FieldGroup, Input } from '../Field/Field';
+import { Label } from '../Label/Label';
 import {
 	DropdownItem,
 	DropdownSection,

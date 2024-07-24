@@ -1,30 +1,13 @@
-import { cva } from 'class-variance-authority';
 import {
-	Separator as RACSeparator,
+	Separator as AriaSeparator,
 	type SeparatorProps,
 } from 'react-aria-components';
 
-const styles = cva({
-	base: 'bg-gray-300 dark:bg-zinc-600 forced-colors:bg-[ButtonBorder]',
-	variants: {
-		orientation: {
-			horizontal: 'h-px w-full',
-			vertical: 'w-px',
-		},
-	},
-	defaultVariants: {
-		orientation: 'horizontal',
-	},
-});
-
 export function Separator(props: SeparatorProps) {
 	return (
-		<RACSeparator
+		<AriaSeparator
 			{...props}
-			className={styles({
-				orientation: props.orientation,
-				className: props.className,
-			})}
+			className='my-2 orientation-horizontal:h-px orientation-vertical:w-px w-full border-background-weak forced-colors:bg-[ButtonBorder]'
 		/>
 	);
 }

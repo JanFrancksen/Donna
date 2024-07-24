@@ -11,10 +11,9 @@ import {
 	FieldError,
 	FieldGroup,
 	Input,
-	Label,
 	fieldBorderStyles,
 } from '../Field/Field';
-import { composeTailwindRenderProps } from '../examples/utils';
+import { Label } from '../Label/Label';
 
 export interface NumberFieldProps extends AriaNumberFieldProps {
 	label?: string;
@@ -29,13 +28,7 @@ export function NumberField({
 	...props
 }: NumberFieldProps) {
 	return (
-		<AriaNumberField
-			{...props}
-			className={composeTailwindRenderProps(
-				props.className,
-				'group flex flex-col gap-1'
-			)}
-		>
+		<AriaNumberField {...props} className='group flex flex-col gap-1'>
 			<Label>{label}</Label>
 			<FieldGroup>
 				{(renderProps) => (

@@ -1,10 +1,10 @@
 'use client';
-import { DatePicker } from '@repo/ui/DatePicker/DatePicker';
+import { DateRangePicker } from '@repo/ui/DateRangePicker/DateRangePicker';
 
 function TestPage() {
 	return (
 		<div className='text-white'>
-			<DatePicker />
+			<DateRangePicker />
 		</div>
 	);
 }

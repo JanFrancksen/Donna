@@ -35,16 +35,16 @@ export function DateRangePicker<T extends DateValue>({
 			)}
 		>
 			{label && <Label>{label}</Label>}
-			<FieldGroup className='w-auto min-w-[208px]'>
-				<DateInput slot='start' className='px-2 py-1.5 text-sm' />
+			<FieldGroup className='w-auto min-w-64'>
+				<DateInput slot='start' className='flex px-2 py-1.5 text-sm' />
 				<span
 					aria-hidden='true'
-					className='text-gray-800 group-disabled:text-gray-200 dark:text-zinc-200 group-disabled:dark:text-zinc-600 forced-colors:text-[ButtonText] group-disabled:forced-colors:text-[GrayText]'
+					className='group-disabled:text-stroke-weak forced-colors:text-[ButtonText] group-disabled:forced-colors:text-[GrayText]'
 				>
 					–
 				</span>
-				<DateInput slot='end' className='flex-1 px-2 py-1.5 text-sm' />
-				<Button variant='icon' className='mr-1 w-6 rounded outline-offset-0'>
+				<DateInput slot='end' className='flex flex-1 px-2 py-1.5 text-sm' />
+				<Button variant='clear'>
 					<CalendarIcon aria-hidden className='h-4 w-4' />
 				</Button>
 			</FieldGroup>

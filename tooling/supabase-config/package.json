@@ -1,0 +1,28 @@
+{
+	"name": "@repo/supabase-config",
+	"version": "0.0.0",
+	"scripts": {
+		"start": "supabase status || supabase start",
+		"reset": "supabase db reset || supabase start",
+		"test": "supabase db test",
+		"lint": "supabase db lint",
+		"deploy": "supabase link --project-ref $SUPABASE_PROJECT_REF && supabase db push",
+		"clean": "git clean -xdf node-modules",
+		"typecheck": "tsc",
+		"with-env": "dotenv -e ../../.env --"
+	},
+	"exports": {
+		"./client": "./src/client.ts",
+		"./server": "./src/server.ts",
+		"./middleware": "./src/middleware.ts"
+	},
+	"dependencies": {
+		"@supabase/ssr": "^0.3.0",
+		"@supabase/supabase-js": "^2.43.5"
+	},
+	"devDependencies": {
+		"@repo/types": "workspace:*",
+		"@repo/tsconfig": "workspace:*",
+		"typescript": "^5.4.5"
+	}
+}

@@ -1,4 +1,3 @@
-import { PostHogPageView } from '@repo/posthog/PostHogPageView';
 import { CSPostHogProvider } from '@repo/posthog/PostHogProvider';
 import { UserMenu } from '@repo/ui/UserMenu/UserMenu';
 import type { Metadata, Viewport } from 'next';
@@ -49,7 +48,6 @@ export default function RootLayout({
 			<CSPostHogProvider>
 				<TRPCReactProvider>
 					<body className={inter.className}>
-						<PostHogPageView />
 						<UserMenu />
 						<header>
 							<div className='fixed top-2 right-2'>

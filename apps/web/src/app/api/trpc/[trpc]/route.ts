@@ -1,9 +1,8 @@
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
-import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
 
 import { appRouter, createTRPCContext } from '@repo/api';
+import { createClient } from '@repo/supabase-config/server';
 
 /**
  * Configure basic CORS headers
@@ -25,7 +24,7 @@ export function OPTIONS() {
 }
 
 const handler = async (req: NextRequest) => {
-	const supabase = createRouteHandlerClient({ cookies });
+	const supabase = createClient();
 
 	const response = await fetchRequestHandler({
 		endpoint: '/api/trpc',

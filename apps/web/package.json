@@ -14,10 +14,11 @@
 	"dependencies": {
 		"@repo/api": "workspace:*",
 		"@repo/db": "workspace:*",
-		"@repo/ui": "workspace:*",
 		"@repo/posthog": "workspace:*",
+		"@repo/ui": "workspace:*",
 		"@repo/validators": "workspace:*",
-		"@supabase/auth-helpers-nextjs": "^0.10.0",
+		"@repo/supabase-config": "workspace:*",
+		"@supabase/ssr": "^0.4.0",
 		"@supabase/supabase-js": "^2.44.4",
 		"@t3-oss/env-nextjs": "^0.11.0",
 		"@tanstack/react-query": "^5.51.11",

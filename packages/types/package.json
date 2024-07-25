@@ -2,10 +2,11 @@
 	"name": "@repo/types",
 	"version": "0.0.0",
 	"exports": {
-		"./types": "./src/index.ts"
+		".": "./src/*"
 	},
 	"scripts": {
-		"clean": "rm -rf .turbo node_modules"
+		"clean": "rm -rf .turbo node_modules",
+		"db-types": "pnpm dlx supabase gen types typescript --project-id 'xqacqppokcrnqiruwgzp' --schema public > ./src/supabase-types.ts"
 	},
 	"devDependencies": {
 		"typescript": "catalog:",

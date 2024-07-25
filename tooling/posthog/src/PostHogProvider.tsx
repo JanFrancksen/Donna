@@ -14,20 +14,3 @@ if (typeof window !== 'undefined') {
 export function CSPostHogProvider({ children }: { children: ReactNode }) {
 	return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
 }
-
-// function PostHogAuthWrapper({ children }: { children: ReactNode }) {
-// 	const auth = useAuth();
-// 	const userInfo = useUser();
-
-// 	useEffect(() => {
-// 		if (userInfo.user) {
-// 			posthog.identify(userInfo.user.id, {
-// 				email: userInfo.user.emailAdresses,
-// 			});
-// 		} else if (!auth.isSignedIn) {
-// 			posthog.reset();
-// 		}
-// 	}, [auth, userInfo.user]);
-
-// 	return children;
-// }

@@ -307,19 +307,6 @@ importers:
         specifier: 'catalog:'
         version: 5.5.4
 
-  tooling/supabase-config:
-    dependencies:
-      '@supabase/supabase-js':
-        specifier: ^2.44.4
-        version: 2.44.4
-    devDependencies:
-      '@repo/tsconfig':
-        specifier: workspace:*
-        version: link:../typescript
-      typescript:
-        specifier: 'catalog:'
-        version: 5.5.4
-
   tooling/tailwind:
     dependencies:
       postcss:

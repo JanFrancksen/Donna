@@ -16,6 +16,6 @@
 		"@repo/tsconfig": "workspace:*"
 	},
 	"dependencies": {
-		"@supabase/supabase-js": "^2.44.4"
+		"@supabase/supabase-js": "^2.45.0"
 	}
 }

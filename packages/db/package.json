@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",
 		"dotenv-cli": "^7.4.2",
-		"drizzle-kit": "^0.23.1",
+		"drizzle-kit": "^0.23.2",
 		"typescript": "catalog:"
 	}
 }

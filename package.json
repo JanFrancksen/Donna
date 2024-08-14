@@ -23,7 +23,7 @@
 		"@commitlint/cli": "^19.4.0",
 		"@commitlint/config-conventional": "^19.2.2",
 		"lefthook": "^1.7.12",
-		"@turbo/gen": "^2.0.12",
+		"@turbo/gen": "^2.0.13",
 		"turbo": "latest"
 	},
 	"peerDependencies": {

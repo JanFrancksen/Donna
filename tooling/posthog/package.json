@@ -17,7 +17,7 @@
 	"dependencies": {
 		"posthog-js": "^1.157.2",
 		"react": "catalog:react18",
-		"@t3-oss/env-core": "^0.11.0"
+		"@t3-oss/env-core": "^0.11.1"
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",

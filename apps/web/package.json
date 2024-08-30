@@ -20,7 +20,7 @@
 		"@supabase/auth-helpers-nextjs": "^0.10.0",
 		"@supabase/supabase-js": "^2.45.2",
 		"@t3-oss/env-nextjs": "^0.11.1",
-		"@tanstack/react-query": "^5.52.2",
+		"@tanstack/react-query": "^5.52.3",
 		"@trpc/client": "11.0.0-rc.490",
 		"@trpc/react-query": "11.0.0-rc.490",
 		"@trpc/server": "11.0.0-rc.490",

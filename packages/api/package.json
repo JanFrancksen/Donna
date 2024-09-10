@@ -14,7 +14,7 @@
 	"dependencies": {
 		"@repo/db": "workspace:*",
 		"@repo/validators": "workspace:*",
-		"@supabase/supabase-js": "^2.45.3",
+		"@supabase/supabase-js": "^2.45.4",
 		"@trpc/server": "11.0.0-rc.502",
 		"nanoid": "^5.0.7",
 		"superjson": "2.2.1",

@@ -17,12 +17,6 @@
 		"./middleware": "./src/middleware.ts"
 	},
 	"dependencies": {
-		"@supabase/ssr": "^0.3.0",
-		"@supabase/supabase-js": "^2.43.5"
-	},
-	"devDependencies": {
-		"@repo/types": "workspace:*",
-		"@repo/tsconfig": "workspace:*",
-		"typescript": "^5.4.5"
+		"@supabase/supabase-js": "^2.45.4"
 	}
 }

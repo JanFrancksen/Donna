@@ -13,10 +13,10 @@
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"postcss": "^8.4.39",
+		"postcss": "^8.4.47",
 		"tailwindcss": "catalog:",
 		"tailwindcss-animate": "^1.0.7",
-		"tailwindcss-react-aria-components": "^1.1.4"
+		"tailwindcss-react-aria-components": "^1.1.5"
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",

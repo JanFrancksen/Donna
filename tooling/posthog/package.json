@@ -15,11 +15,9 @@
 		"with-env": "dotenv -e ../../.env --"
 	},
 	"dependencies": {
-		"@repo/supabase-config": "workspace:*",
-		"@t3-oss/env-core": "^0.11.0",
-		"posthog-js": "^1.149.1",
-		"posthog-node": "^4.0.1",
-		"react": "catalog:react18"
+		"posthog-js": "^1.164.1",
+		"react": "catalog:react18",
+		"@t3-oss/env-core": "^0.11.1"
 	},
 	"devDependencies": {
 		"@repo/tsconfig": "workspace:*",

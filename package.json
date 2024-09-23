@@ -22,7 +22,7 @@
 		"@biomejs/biome": "^1.8.3",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
-		"lefthook": "^1.7.15",
+		"lefthook": "^1.7.16",
 		"@turbo/gen": "^2.1.2",
 		"turbo": "latest"
 	},

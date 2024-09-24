@@ -3,7 +3,7 @@
 import { createClient } from '@repo/supabase/client';
 import { Button } from '@repo/ui/button';
 
-export function GoogleSignin() {
+export function GithubSignin() {
   const supabase = createClient();
 
   const handleSignin = () => {
@@ -16,7 +16,7 @@ export function GoogleSignin() {
   };
 
   return (
-    <Button onClick={handleSignin} variant='outline' className='font-mono'>
+    <Button onClick={handleSignin} variant='outline'>
       Sign in with Github
     </Button>
   );

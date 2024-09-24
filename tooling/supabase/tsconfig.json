@@ -1,9 +1,5 @@
 {
-	"extends": "@repo/typescript-config/base.json",
-	"compilerOptions": {
-		"moduleResolution": "nodenext",
-		"module": "nodenext"
-	},
-	"include": ["src"],
-	"exclude": ["node_modules", "dist"]
+	"extends": "@repo/tsconfig/base.json",
+	"include": ["src", "."],
+	"exclude": ["node_modules"]
 }

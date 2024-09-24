@@ -11,7 +11,7 @@
 		"@repo/logger": "workspace:*",
 		"react": "^18.3.1",
 		"server-only": "^0.0.1",
-		"supabase": "^1.191.3"
+		"supabase": "^1.200.3"
 	},
 	"devDependencies": {
 		"@supabase/supabase-js": "^2.45.4",

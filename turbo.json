@@ -1,22 +1,22 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"ui": "tui",
+	"globalDependencies": ["**/.env"],
+	"ui": "stream",
 	"tasks": {
 		"topo": {
 			"dependsOn": ["^topo"]
 		},
 		"build": {
+			"env": ["SUPABASE_SERVICE_KEY", "SUPABASE_API_KEY", "RESEND_API_KEY"],
+			"inputs": ["$TURBO_DEFAULT$", ".env"],
 			"dependsOn": ["^build"],
-			"outputs": [
-				".next/**",
-				"!.next/cache/**",
-				"next-env.d.ts",
-				".expo/**",
-				".output/**",
-				".vercel/output/**"
-			]
+			"outputs": [".next/**", "!.next/cache/**", "next-env.d.ts", ".expo/**"]
+		},
+		"start": {
+			"cache": false
 		},
 		"dev": {
+			"inputs": ["$TURBO_DEFAULT$", ".env"],
 			"persistent": true,
 			"cache": false
 		},

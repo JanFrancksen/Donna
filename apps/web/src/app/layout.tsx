@@ -1,80 +1,41 @@
-import { CSPostHogProvider } from '@repo/posthog/PostHogProvider';
-import { UserMenu } from '@repo/ui/UserMenu/UserMenu';
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import { env } from '~/env';
-import { AuthShowcase } from './_components/auth-showcase';
-import './globals.css';
-import { TRPCReactProvider } from './trpc/react';
-import { api } from './trpc/server';
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { cn } from '@repo/ui/cn';
+import '@repo/ui/globals.css';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const DepartureMono = localFont({
+  src: '../fonts/DepartureMono-Regular.woff2',
+  variable: '--font-departure-mono',
+});
 
 export const metadata: Metadata = {
-	metadataBase: new URL(
-		env.VERCEL_ENV === 'production'
-			? 'https://j1n.dev'
-			: 'http://localhost:3000'
-	),
-	title: 'Your awesome Project',
-	description: 'Your awesome Project Description',
-	openGraph: {
-		title: 'Your awesome Project Title',
-		description: 'Your awesome Project Description',
-		url: '',
-		siteName: 'Your awesome Project',
-	},
-	twitter: {
-		card: 'summary_large_image',
-		site: '@j1ndev',
-		creator: '@j1ndev',
-	},
-};
-
-export const viewport: Viewport = {
-	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: 'white' },
-		{ media: '(prefers-color-scheme: dark)', color: 'black' },
-	],
+  metadataBase: new URL('https://v1.run'),
+  title: 'Create v1',
+  description:
+    'A free, open-source starter kit for your next project, built with insights from Midday.',
 };
 
 export default function RootLayout({
-	children,
-}: { children: React.ReactNode }): JSX.Element {
-	const posts = api.post.all();
-
-	return (
-		<html lang='de' className='dark'>
-			<CSPostHogProvider>
-				<TRPCReactProvider>
-					<body className={inter.className}>
-						<UserMenu />
-						<header>
-							<div className='fixed top-2 right-2'>
-								<AuthShowcase />
-							</div>
-						</header>
-						<main className='flex min-h-screen flex-col items-center justify-center bg-background'>
-							{children}
-
-							{/* <CreatePostForm />
-						<div className='h-[40vh] w-full max-w-2xl overflow-y-scroll'>
-							<Suspense
-								fallback={
-									<div className='flex w-full flex-col gap-4'>
-										<PostCardSkeleton />
-										<PostCardSkeleton />
-										<PostCardSkeleton />
-									</div>
-								}
-							>
-								<PostList posts={posts} />
-							</Suspense>
-						</div> */}
-						</main>
-					</body>
-				</TRPCReactProvider>
-			</CSPostHogProvider>
-		</html>
-	);
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={cn(
+          `${DepartureMono.variable}${GeistSans.variable}${GeistMono.variable}`,
+          'dark antialiased'
+        )}
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }

@@ -6,10 +6,10 @@
 	},
 	"scripts": {
 		"clean": "rm -rf .turbo node_modules",
-		"db-types": "pnpm dlx supabase gen types typescript --project-id 'xqacqppokcrnqiruwgzp' --schema public > ./src/supabase-types.ts"
+		"db-types": "bunx supabase gen types typescript --project-id 'xqacqppokcrnqiruwgzp' --schema public > ./src/supabase-types.ts"
 	},
 	"devDependencies": {
-		"typescript": "catalog:",
+		"typescript": "^5.5.3",
 		"@repo/tsconfig": "workspace:*"
 	}
 }

@@ -8,7 +8,7 @@ It aims to use blazingly fast and modern technology.
 Create a repo based on this template and run
 
 ```sh
-pnpm i
+bun install
 turbo dev
 ```
 

@@ -1,44 +1,29 @@
 {
 	"name": "@repo/web",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"private": true,
-	"type": "module",
 	"scripts": {
-		"build": "pnpm with-env next build",
+		"dev": "next dev -p 3001",
+		"build": "next build",
 		"clean": "git clean -xdf .next .turbo node_modules",
-		"dev": "pnpm with-env next dev",
-		"start": "pnpm with-env next start",
-		"typecheck": "tsc --noEmit",
-		"with-env": "dotenv -e ../../.env --"
+		"lint": "biome lint",
+		"format": "biome format --write .",
+		"start": "next start",
+		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@repo/api": "workspace:*",
-		"@repo/db": "workspace:*",
-		"@repo/posthog": "workspace:*",
+		"@calcom/embed-react": "^1.5.0",
 		"@repo/ui": "workspace:*",
-		"@repo/validators": "workspace:*",
-		"@supabase/auth-helpers-nextjs": "^0.10.0",
-		"@supabase/supabase-js": "^2.45.4",
-		"@t3-oss/env-nextjs": "^0.11.1",
-		"@tanstack/react-query": "^5.56.2",
-		"@trpc/client": "11.0.0-rc.528",
-		"@trpc/react-query": "11.0.0-rc.528",
-		"@trpc/server": "11.0.0-rc.528",
 		"geist": "^1.3.1",
-		"next": "^14.2.13",
-		"react": "catalog:react18",
-		"react-dom": "catalog:react18"
+		"next": "14.2.7",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"usehooks-ts": "^3.1.0"
 	},
 	"devDependencies": {
-		"@repo/tailwind-config": "workspace:*",
-		"@repo/tsconfig": "workspace:*",
-		"@repo/types": "workspace:*",
-		"@types/node": "^20.16.5",
-		"@types/react": "catalog:react18",
-		"@types/react-dom": "catalog:react18",
-		"dotenv-cli": "^7.4.2",
-		"jiti": "^1.21.6",
-		"tailwindcss": "catalog:",
-		"typescript": "catalog:"
+		"@types/node": "^22",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"typescript": "^5.5.4"
 	}
 }

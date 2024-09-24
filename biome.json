@@ -1,9 +1,23 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
 	"linter": {
+		"ignore": ["node_modules", ".next", "packages/tsconfig"],
 		"enabled": true,
 		"rules": {
 			"recommended": true,
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			},
+			"style": {
+				"noNonNullAssertion": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off",
+				"noUnusedImports": { "level": "error" }
+			},
 			"nursery": {
 				"useSortedClasses": {
 					"level": "warn",
@@ -13,14 +27,12 @@
 						"functions": ["clsx", "cva", "tw"]
 					}
 				}
-			},
-			"correctness": {
-				"noUnusedImports": { "level": "error" }
 			}
 		}
 	},
 	"javascript": {
 		"formatter": {
+			"indentStyle": "space",
 			"enabled": true,
 			"quoteStyle": "single",
 			"jsxQuoteStyle": "single",

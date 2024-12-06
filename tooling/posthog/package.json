@@ -15,7 +15,7 @@
 		"with-env": "dotenv -e ../../.env --"
 	},
 	"dependencies": {
-		"posthog-js": "^1.164.3",
+		"posthog-js": "^1.194.5",
 		"react": "18.3.1",
 		"@t3-oss/env-core": "^0.11.1"
 	},

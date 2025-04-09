@@ -9,6 +9,7 @@
 		"clean:workspaces": "turbo clean",
 		"dev": "turbo dev --parallel",
 		"dev:web": "turbo dev --filter=@repo/web",
+		"dev:web-new": "docker-compose up -d && docker-compose exec database pg_isready -U username -d default_database && bun db:push & bun dev:web",
 		"dev:jobs": "turbo jobs --filter=@repo/jobs",
 		"dev:app": "turbo dev --filter=@repo/app",
 		"start:web": "turbo start --filter=@repo/web",
@@ -20,6 +21,7 @@
 		"lint:repo:fix": "bunx sherif@latest --fix",
 		"typecheck": "turbo typecheck",
 		"ui-add": "turbo run ui-add",
+		"db:push": "turbo run db:push",
 		"knip": "knip"
 	},
 	"devDependencies": {

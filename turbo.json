@@ -55,6 +55,9 @@
 		},
 		"db:types": {
 			"cache": false
+		},
+		"db:push": {
+			"cache": false
 		}
 	}
 }

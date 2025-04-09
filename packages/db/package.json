@@ -1,0 +1,42 @@
+{
+	"name": "@repo/db",
+	"version": "0.0.1",
+	"main": "index.ts",
+	"type": "module",
+	"private": true,
+	"types": "index.ts",
+	"scripts": {
+		"clean": "rm -rf .turbo node_modules",
+		"format": "biome format --write",
+		"lint": "biome check .",
+		"typecheck": "tsc --noEmit",
+		"gen:schema": "bun with-env bunx @better-auth/cli generate --config ./src/db/auth.ts --output ./src/db/schema/auth-schema.ts --y",
+		"db:generate": "bun with-env drizzle-kit generate",
+		"db:push": "bun with-env drizzle-kit push",
+		"db:pull": "bun with-env drizzle-kit pull",
+		"db:push-force": "bun with-env drizzle-kit push --force",
+		"db:studio": "bun with-env drizzle-kit studio",
+		"with-env": "dotenv -e ../../.env --"
+	},
+	"dependencies": {
+		"bcrypt-ts": "^6.0.0",
+		"dotenv": "^16.4.7",
+		"drizzle-orm": "^0.41.0",
+		"pg": "^8.14.1"
+	},
+	"devDependencies": {
+		"@types/pg": "^8.11.11",
+		"drizzle-kit": "^0.30.5",
+		"tsx": "^4.19.3",
+		"dotenv-cli": "^8.0.0",
+		"better-auth": "^1.2.5",
+		"typescript": "^5.8.3"
+	},
+	"exports": {
+		".": "./src/index.ts",
+		"./schema/orders": "./src/db/schema/orders.ts",
+		"./queries": "./src/db/queries/queries.ts",
+		"./auth": "./src/db/auth.ts",
+		"./auth-client": "./src/db/auth-client.ts"
+	}
+}

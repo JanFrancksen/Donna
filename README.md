@@ -23,7 +23,7 @@ This monorepo includes the following apps/packages:
 - `web`: a [Next.js](https://nextjs.org/) app
 - `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
 - `@repo/tailwind-config`: `tailwind.config.js` and `postcss.config.js` to reuse in your packages
-- `@repo/tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

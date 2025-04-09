@@ -1,0 +1,9 @@
+{
+	"extends": "@repo/typescript-config/base.json",
+	"compilerOptions": {
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+		"jsx": "react"
+	},
+	"include": ["src", "drizzle.config.ts"],
+	"exclude": ["node_modules"]
+}

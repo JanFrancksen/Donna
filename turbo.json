@@ -48,6 +48,13 @@
 		"typecheck": {
 			"dependsOn": ["^topo"],
 			"outputs": ["node_modules/.cache/tsbuildinfo.json"]
+		},
+		"ui-add": {
+			"cache": false,
+			"interactive": true
+		},
+		"db:types": {
+			"cache": false
 		}
 	}
 }

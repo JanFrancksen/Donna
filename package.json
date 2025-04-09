@@ -18,7 +18,9 @@
 		"lint": "turbo lint && bun lint:repo",
 		"lint:repo": "bunx sherif@latest",
 		"lint:repo:fix": "bunx sherif@latest --fix",
-		"typecheck": "turbo typecheck"
+		"typecheck": "turbo typecheck",
+		"ui-add": "turbo run ui-add",
+		"knip": "knip"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.2",

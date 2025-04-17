@@ -12,6 +12,7 @@
 		"dev:web-new": "docker-compose up -d && docker-compose exec database pg_isready -U username -d default_database && bun db:push & bun dev:web",
 		"dev:jobs": "turbo jobs --filter=@repo/jobs",
 		"dev:app": "turbo dev --filter=@repo/app",
+		"db:studio": "bun --filter=@repo/db db:studio",
 		"start:web": "turbo start --filter=@repo/web",
 		"start:app": "turbo start --filter=@repo/app",
 		"test": "turbo test --parallel",

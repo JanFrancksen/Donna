@@ -1,10 +1,10 @@
+import { polar } from '@polar-sh/better-auth';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { nextCookies } from 'better-auth/next-js';
 import { db } from '..';
-import { session, verification } from './schema/auth-schema';
-import { user } from './schema/auth-schema';
-import { account } from './schema/auth-schema';
+import { polarClient } from './polar-client';
+import { account, session, user, verification } from './schema/auth-schema';
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -19,5 +19,33 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
-  plugins: [nextCookies()],
+  plugins: [
+    nextCookies(),
+    polar({
+      client: polarClient,
+      // Enable automatic Polar Customer creation on signup
+      createCustomerOnSignUp: true,
+      // Enable customer portal
+      enableCustomerPortal: true, // Deployed under /portal for authenticated users
+      // Configure checkout
+      checkout: {
+        enabled: true,
+        products: [
+          {
+            productId: '123-456-789', // ID of Product from Polar Dashboard
+            slug: 'pro', // Custom slug for easy reference in Checkout URL, e.g. /checkout/pro
+          },
+        ],
+        successUrl: '/success?checkout_id={CHECKOUT_ID}',
+      },
+      // Incoming Webhooks handler will be installed at /polar/webhooks
+      webhooks: {
+        secret: process.env.POLAR_WEBHOOK_SECRET || '',
+        onPayload: (payload) => {
+          console.log(payload);
+          return Promise.resolve();
+        },
+      },
+    }),
+  ],
 });

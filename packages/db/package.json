@@ -19,6 +19,7 @@
 		"with-env": "dotenv -e ../../.env --"
 	},
 	"dependencies": {
+		"@polar-sh/better-auth": "^0.0.11",
 		"bcrypt-ts": "^6.0.0",
 		"dotenv": "^16.4.7",
 		"drizzle-orm": "^0.41.0",

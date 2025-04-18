@@ -2,6 +2,8 @@ import { polar } from '@polar-sh/better-auth';
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { nextCookies } from 'better-auth/next-js';
+import { organization } from 'better-auth/plugins';
+import { sso } from 'better-auth/plugins/sso';
 import { db } from '..';
 import { polarClient } from './polar-client';
 import { account, session, user, verification } from './schema/auth-schema';
@@ -20,7 +22,9 @@ export const auth = betterAuth({
     enabled: true,
   },
   plugins: [
+    sso(),
     nextCookies(),
+    organization(),
     polar({
       client: polarClient,
       // Enable automatic Polar Customer creation on signup

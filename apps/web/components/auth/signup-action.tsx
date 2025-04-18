@@ -1,44 +1,47 @@
 'use server';
 
 import { auth } from '@repo/db/auth';
+import { redirect } from 'next/navigation';
 
-interface LoginResponse {
+interface SignupResponse {
   success: boolean;
   error?: string;
 }
 
-export async function loginAction({
+export async function signupAction({
+  name,
   email,
   password,
 }: {
+  name: string;
   email: string;
   password: string;
-}): Promise<LoginResponse> {
+}): Promise<SignupResponse> {
   try {
-    const response = await auth.api.signInEmail({
+    const response = await auth.api.signUpEmail({
       body: {
+        name,
         email,
         password,
       },
       asResponse: true,
-      callbackURL: '/',
     });
 
     if (!response.ok) {
       return {
         success: false,
-        error: 'Invalid credentials',
+        error: 'Failed to create account',
       };
     }
 
+    redirect('/');
     return {
       success: true,
     };
   } catch (error) {
     return {
       success: false,
-      error:
-        error instanceof Error ? error.message : 'An unexpected error occurred',
+      error: 'An unexpected error occurred',
     };
   }
 }

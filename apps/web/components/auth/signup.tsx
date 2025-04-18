@@ -24,31 +24,40 @@ import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { z } from 'zod';
-import { loginAction } from './login-action';
+import { signupAction } from './signup-action';
 
-export function LoginForm({
+export function SignupForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<'div'>) {
-  const formSchema = z.object({
-    email: z
-      .string()
-      .min(1, 'Email is required')
-      .email('Please enter a valid email address'),
-    password: z
-      .string()
-      .min(8, 'Password must be at least 8 characters')
-      .regex(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        'Password must contain at least one uppercase letter, one lowercase letter, one number and one special character'
-      ),
-  });
+  const formSchema = z
+    .object({
+      name: z.string().min(1, 'Name is required'),
+      email: z
+        .string()
+        .min(1, 'Email is required')
+        .email('Please enter a valid email address'),
+      password: z
+        .string()
+        .min(8, 'Password must be at least 8 characters')
+        .regex(
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+          'Password must contain at least one uppercase letter, one lowercase letter, one number and one special character'
+        ),
+      confirmPassword: z.string(),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+      message: "Passwords don't match",
+      path: ['confirmPassword'],
+    });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: '',
       email: '',
       password: '',
+      confirmPassword: '',
     },
   });
 
@@ -56,9 +65,9 @@ export function LoginForm({
     <div className={cn('flex flex-col gap-6', className)} {...props}>
       <Card>
         <CardHeader className='text-center'>
-          <CardTitle className='text-xl'>Welcome back</CardTitle>
+          <CardTitle className='text-xl'>Create an account</CardTitle>
           <CardDescription>
-            Login with your Apple or Google account
+            Sign up with your Apple or Google account
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -66,20 +75,21 @@ export function LoginForm({
             <form
               action={async (formData) => {
                 try {
-                  const result = await loginAction({
+                  const result = await signupAction({
+                    name: formData.get('name') as string,
                     email: formData.get('email') as string,
                     password: formData.get('password') as string,
                   });
 
                   if (result.error) {
-                    toast.error('Login failed', {
+                    toast.error('Signup failed', {
                       description: result.error,
                     });
                     return;
                   }
 
-                  toast.success('Login successful', {
-                    description: 'Welcome back!',
+                  toast.success('Account created', {
+                    description: 'Welcome to our platform!',
                   });
                 } catch (error) {
                   toast.error('Something went wrong', {
@@ -97,7 +107,7 @@ export function LoginForm({
                         fill='currentColor'
                       />
                     </svg>
-                    Login with Apple
+                    Sign up with Apple
                   </Button>
                   <Button variant='outline' className='w-full'>
                     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
@@ -106,7 +116,7 @@ export function LoginForm({
                         fill='currentColor'
                       />
                     </svg>
-                    Login with Google
+                    Sign up with Google
                   </Button>
                 </div>
                 <div className='relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-border after:border-t'>
@@ -115,6 +125,24 @@ export function LoginForm({
                   </span>
                 </div>
                 <div className='grid gap-6'>
+                  <FormField
+                    control={form.control}
+                    name='name'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder='Enter your name'
+                            type='text'
+                            autoComplete='name'
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                   <FormField
                     control={form.control}
                     name='email'
@@ -129,7 +157,6 @@ export function LoginForm({
                             {...field}
                           />
                         </FormControl>
-                        <FormDescription>Enter your email</FormDescription>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -142,9 +169,9 @@ export function LoginForm({
                         <FormLabel>Password</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder='Enter your password'
+                            placeholder='Create a password'
                             type='password'
-                            autoComplete='current-password'
+                            autoComplete='new-password'
                             {...field}
                           />
                         </FormControl>
@@ -156,14 +183,32 @@ export function LoginForm({
                       </FormItem>
                     )}
                   />
+                  <FormField
+                    control={form.control}
+                    name='confirmPassword'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Confirm Password</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder='Confirm your password'
+                            type='password'
+                            autoComplete='new-password'
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                   <Button type='submit' className='w-full'>
-                    Login
+                    Create Account
                   </Button>
                 </div>
                 <div className='text-center text-sm'>
-                  Don&apos;t have an account?{' '}
-                  <Link href='/signup' className='underline underline-offset-4'>
-                    Sign up
+                  Already have an account?{' '}
+                  <Link href='/login' className='underline underline-offset-4'>
+                    Login
                   </Link>
                 </div>
               </div>

@@ -1,13 +1,13 @@
-import Image from 'next/image';
+import { UserMenu } from '@/components/auth/user-menu';
 
-export default function AuthLayout({
+export default function AppLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <div className='my-12 flex min-h-screen flex-col items-center justify-center gap-12'>
-      <Image src='/onyxsoft_logo.png' alt='logo' width={260} height={38} />
+      <UserMenu />
       {children}
     </div>
   );

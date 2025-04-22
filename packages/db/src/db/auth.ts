@@ -27,9 +27,7 @@ export const auth = betterAuth({
     organization(),
     polar({
       client: polarClient,
-      // Enable automatic Polar Customer creation on signup
       createCustomerOnSignUp: true,
-      // Enable customer portal
       enableCustomerPortal: true, // Deployed under /portal for authenticated users
       // Configure checkout
       checkout: {

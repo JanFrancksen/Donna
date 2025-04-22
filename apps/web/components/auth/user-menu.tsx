@@ -33,10 +33,7 @@ export function UserMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant='ghost'
-          className='absolute top-4 right-4 h-auto hover:bg-transparent'
-        >
+        <Button variant='ghost'>
           <Avatar className='size-8'>
             <AvatarImage src={session?.user?.image || ''} alt='Profile image' />
             <AvatarFallback>{session?.user?.name?.charAt(0)}</AvatarFallback>

@@ -6,8 +6,10 @@ export default function AppLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className='my-12 flex min-h-screen flex-col items-center justify-center gap-12'>
-      <UserMenu />
+    <div>
+      <div className='absolute top-4 right-4'>
+        <UserMenu />
+      </div>
       {children}
     </div>
   );

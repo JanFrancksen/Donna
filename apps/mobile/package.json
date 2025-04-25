@@ -1,0 +1,23 @@
+{
+	"name": "@repo/mobile",
+	"version": "1.0.0",
+	"main": "index.ts",
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web"
+	},
+	"dependencies": {
+		"expo": "~52.0.46",
+		"expo-status-bar": "~2.0.1",
+		"react": "19.1.0",
+		"react-native": "0.79.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.26.10",
+		"@types/react": "~19.1.2",
+		"typescript": "^5.8.3"
+	},
+	"private": true
+}

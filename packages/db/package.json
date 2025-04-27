@@ -19,15 +19,15 @@
 		"with-env": "dotenv -e ../../.env --"
 	},
 	"dependencies": {
-		"@polar-sh/better-auth": "^0.1.0",
+		"@polar-sh/better-auth": "^0.1.1",
 		"@polar-sh/sdk": "^0.32.11",
 		"bcrypt-ts": "^6.0.0",
 		"dotenv": "^16.5.0",
-		"drizzle-orm": "^0.42.0",
-		"pg": "^8.14.1"
+		"drizzle-orm": "^0.43.1",
+		"pg": "^8.15.6"
 	},
 	"devDependencies": {
-		"@types/pg": "^8.11.13",
+		"@types/pg": "^8.11.14",
 		"drizzle-kit": "^0.31.0",
 		"tsx": "^4.19.3",
 		"dotenv-cli": "^8.0.0",

@@ -2,11 +2,18 @@ import { Pressable, StyleSheet, Text } from 'react-native';
 
 interface ButtonProps {
   children: string;
+  onPress: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children }) => {
+export const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
   return (
-    <Pressable style={styles.button}>
+    <Pressable
+      style={styles.button}
+      onPress={onPress}
+      accessible={true}
+      accessibilityRole='button'
+      accessibilityLabel={children}
+    >
       <Text style={styles.buttonText}>{children}</Text>
     </Pressable>
   );

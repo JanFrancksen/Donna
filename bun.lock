@@ -23,9 +23,9 @@
       "name": "@repo/desktop",
       "version": "0.0.0",
       "devDependencies": {
-        "@tauri-apps/cli": "latest",
-        "@types/node": "latest",
-        "typescript": "latest",
+        "@tauri-apps/cli": "2.5.0",
+        "@types/node": "^22.15.2",
+        "typescript": "^5.8.3",
       },
     },
     "apps/mobile": {
@@ -181,7 +181,7 @@
       "version": "1.0.0",
       "dependencies": {
         "@upstash/ratelimit": "^2.0.3",
-        "@upstash/redis": "^1.34.0",
+        "@upstash/redis": "^1.34.8",
         "server-only": "^0.0.1",
       },
     },
@@ -1206,7 +1206,7 @@
 
     "@upstash/ratelimit": ["@upstash/ratelimit@2.0.5", "", { "dependencies": { "@upstash/core-analytics": "^0.0.10" }, "peerDependencies": { "@upstash/redis": "^1.34.3" } }, "sha512-1FRv0cs3ZlBjCNOCpCmKYmt9BYGIJf0J0R3pucOPE88R21rL7jNjXG+I+rN/BVOvYJhI9niRAS/JaSNjiSICxA=="],
 
-    "@upstash/redis": ["@upstash/redis@1.34.7", "", { "dependencies": { "crypto-js": "^4.2.0" } }, "sha512-EJ/g+ttDL3MFS8WNDLj/Buybo3FpPw2IAFl4X8lxh8/l7YTq6kTqT6FKkq8eYRdN6lGlVw+W6qnmym734m39Tg=="],
+    "@upstash/redis": ["@upstash/redis@1.34.8", "", { "dependencies": { "crypto-js": "^4.2.0" } }, "sha512-eGJgOKc+2Uq4AdSM0lNx+WvFFhQeyhJ32SGNuSniLPg4lNb6m5h2AQ77qL+TgWiMZO8HCQ82Zsc/RlVBevCWTg=="],
 
     "@urql/core": ["@urql/core@5.1.1", "", { "dependencies": { "@0no-co/graphql.web": "^1.0.5", "wonka": "^6.3.2" } }, "sha512-aGh024z5v2oINGD/In6rAtVKTm4VmQ2TxKQBAtk2ZSME5dunZFcjltw4p5ENQg+5CBhZ3FHMzl0Oa+rwqiWqlg=="],
 
@@ -3117,6 +3117,8 @@
     "@types/react-dom/@types/react": ["@types/react@19.1.2", "", { "dependencies": { "csstype": "^3.0.2" } }, "sha512-oxLPMytKchWGbnQM9O7D67uPa9paTNxO7jVoNMXgkkErULBPhPARCfkKL9ytcIJJRGjbsVwW4ugJzyFFvm/Tiw=="],
 
     "@types/through/@types/node": ["@types/node@22.14.0", "", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-Kmpl+z84ILoG+3T/zQFyAJsU6EPTmOCj8/2+83fSN6djd6I4o7uOuGIH6vq3PrjY5BGitSbFuMN18j3iknubbA=="],
+
+    "@upstash/core-analytics/@upstash/redis": ["@upstash/redis@1.34.7", "", { "dependencies": { "crypto-js": "^4.2.0" } }, "sha512-EJ/g+ttDL3MFS8WNDLj/Buybo3FpPw2IAFl4X8lxh8/l7YTq6kTqT6FKkq8eYRdN6lGlVw+W6qnmym734m39Tg=="],
 
     "ajv/fast-deep-equal": ["fast-deep-equal@3.1.3", "", {}, "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="],
 

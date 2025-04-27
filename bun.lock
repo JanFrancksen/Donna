@@ -77,7 +77,7 @@
       "name": "@repo/db",
       "version": "0.0.1",
       "dependencies": {
-        "@polar-sh/better-auth": "^0.1.0",
+        "@polar-sh/better-auth": "^0.1.1",
         "@polar-sh/sdk": "^0.32.11",
         "bcrypt-ts": "^6.0.0",
         "dotenv": "^16.5.0",
@@ -858,7 +858,7 @@
 
     "@polar-sh/adapter-utils": ["@polar-sh/adapter-utils@0.2.0", "", { "dependencies": { "@polar-sh/sdk": "^0.32.11" } }, "sha512-dSP4E8BgHyaGevYAaTRlNW8rJjR91GXP7InV2+WZ2je2+Oq8PJKo7sLWbpkkJp9zmRx1I88f76rk0XmCY8Aivg=="],
 
-    "@polar-sh/better-auth": ["@polar-sh/better-auth@0.1.0", "", { "dependencies": { "zod": "^3.24.2" }, "peerDependencies": { "@polar-sh/sdk": "^0.32.11", "better-auth": "^1.2.0" } }, "sha512-Gw67CoLoPIelwpa+BR7cMZb/i8MJP2g2E93MhEl26OuWGt8xNbAqzXasDoyUgZQ/r6ZwwdYPRzUqMWmwnRTEqQ=="],
+    "@polar-sh/better-auth": ["@polar-sh/better-auth@0.1.1", "", { "dependencies": { "zod": "^3.24.2" }, "peerDependencies": { "@polar-sh/sdk": "^0.32.11", "better-auth": "^1.2.0" } }, "sha512-+7vLpMCDwzBS87CUXsFb9ItOWMu/zkaJ0Hzghzi8Ejf+sBEawArE3kguChLmsTO2t0/Z4+NiQbbSMqND+9jwSg=="],
 
     "@polar-sh/nextjs": ["@polar-sh/nextjs@0.4.0", "", { "dependencies": { "@polar-sh/adapter-utils": "0.2.0", "@polar-sh/sdk": "^0.32.11" }, "peerDependencies": { "next": "^15.0.0 || ^15.2.0-canary.*" } }, "sha512-D7UibCAo5mUnaNvD6/81PZtQkw44x3ga0lMtPNxbwO7t7LonwSiyKEBiwtgLyxErSvUTnevvay9Hone9t4KRxg=="],
 
@@ -3033,8 +3033,6 @@
     "@opentelemetry/instrumentation/semver": ["semver@7.7.1", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA=="],
 
     "@opentelemetry/sdk-trace-node/semver": ["semver@7.7.1", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA=="],
-
-    "@polar-sh/better-auth/zod": ["zod@3.24.2", "", {}, "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="],
 
     "@react-native/babel-preset/babel-plugin-syntax-hermes-parser": ["babel-plugin-syntax-hermes-parser@0.25.1", "", { "dependencies": { "hermes-parser": "0.25.1" } }, "sha512-IVNpGzboFLfXZUAwkLFcI/bnqVbwky0jP3eBno4HKtqvQJAHBLdgxiG6lQ4to0+Q/YCN3PO0od5NZwIKyY4REQ=="],
 

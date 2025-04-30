@@ -11,6 +11,9 @@
 		"zod": "^3.24.3"
 	},
 	"devDependencies": {
+		"hono-pino": "^0.8.0",
+		"pino": "^9.6.0",
+		"pino-pretty": "^13.0.0",
 		"@types/bun": "latest"
 	}
 }

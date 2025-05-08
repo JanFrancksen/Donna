@@ -144,7 +144,7 @@
       "version": "0.0.0",
       "devDependencies": {
         "@repo/typescript-config": "workspace:*",
-        "typescript": "^5.6.2",
+        "typescript": "^5.8.3",
       },
     },
     "packages/ui": {
@@ -194,7 +194,7 @@
       "devDependencies": {
         "@repo/typescript-config": "workspace:*",
         "@turbo/gen": "^2.1.2",
-        "typescript": "^5.6.2",
+        "typescript": "^5.8.3",
       },
     },
     "tooling/github": {
@@ -227,7 +227,7 @@
       "devDependencies": {
         "@repo/typescript-config": "workspace:*",
         "dotenv-cli": "^7.4.2",
-        "typescript": "^5.6.2",
+        "typescript": "^5.8.3",
       },
     },
     "tooling/typescript-config": {

@@ -213,7 +213,7 @@
       "name": "@repo/logger",
       "version": "0.1.0",
       "dependencies": {
-        "pino": "^9.4.0",
+        "pino": "^9.6.0",
       },
     },
     "tooling/posthog": {

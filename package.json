@@ -31,8 +31,8 @@
 		"@commitlint/cli": "^19.8.0",
 		"@commitlint/config-conventional": "^19.8.0",
 		"lefthook": "^1.11.11",
-		"@turbo/gen": "^2.5.2",
-		"turbo": "^2.5.2"
+		"@turbo/gen": "^2.5.3",
+		"turbo": "^2.5.3"
 	},
 	"peerDependencies": {
 		"typescript": "^5.8.3"

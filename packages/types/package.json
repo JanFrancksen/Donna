@@ -9,7 +9,7 @@
 		"db-types": "bunx supabase gen types typescript --project-id 'xqacqppokcrnqiruwgzp' --schema public > ./src/supabase-types.ts"
 	},
 	"devDependencies": {
-		"typescript": "^5.6.2",
+		"typescript": "catalog:",
 		"@repo/typescript-config": "workspace:*"
 	}
 }

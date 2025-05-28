@@ -16,12 +16,12 @@
 	},
 	"dependencies": {
 		"posthog-js": "^1.164.3",
-		"react": "18.3.1",
+		"react": "catalog:",
 		"@t3-oss/env-core": "^0.11.1"
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "workspace:*",
 		"dotenv-cli": "^7.4.2",
-		"typescript": "^5.6.2"
+		"typescript": "catalog:"
 	}
 }

@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.26.10",
 		"@types/react": "~18.3.12",
-		"typescript": "^5.8.3"
+		"typescript": "catalog:"
 	},
 	"private": true
 }

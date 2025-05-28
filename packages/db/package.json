@@ -32,7 +32,7 @@
 		"tsx": "^4.19.3",
 		"dotenv-cli": "^8.0.0",
 		"better-auth": "^1.2.7",
-		"typescript": "^5.8.3"
+		"typescript": "catalog:"
 	},
 	"exports": {
 		".": "./src/index.ts",

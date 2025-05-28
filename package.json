@@ -1,8 +1,15 @@
 {
 	"name": "donna",
 	"private": true,
-	"workspaces": ["apps/*", "packages/*", "tooling/*"],
-	"packageManager": "bun@1.1.29",
+	"workspaces": {
+		"packages": ["apps/*", "packages/*", "tooling/*"],
+		"catalog": {
+			"react": "^19.1.0",
+			"zod": "4.0.0-beta.1",
+			"typescript": "^5.8.3"
+		}
+	},
+	"packageManager": "bun@1.2.14",
 	"scripts": {
 		"build": "turbo build",
 		"clean": "git clean -xdf node_modules",
@@ -35,6 +42,6 @@
 		"turbo": "^2.5.2"
 	},
 	"peerDependencies": {
-		"typescript": "^5.8.3"
+		"typescript": "catalog:"
 	}
 }

@@ -8,8 +8,10 @@
 		"format": "biome format --write .",
 		"typecheck": "tsc --noEmit",
 		"dev": "email dev -p 3003",
+		"email:dev": "email dev -p 3003",
 		"build": "email build",
-		"start": "email start"
+		"start": "email start",
+		"export": "email export"
 	},
 	"dependencies": {
 		"@react-email/components": "^0.0.36",

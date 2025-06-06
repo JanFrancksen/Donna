@@ -1,63 +1,49 @@
 import {
   Body,
-  Button,
   Container,
-  Heading,
-  Hr,
   Html,
-  Link,
   Preview,
   Section,
   Tailwind,
+  Text,
 } from '@react-email/components';
-import { Logo } from 'components/logo';
-
-const baseUrl = process.env.BASE_URL
-  ? `https://${process.env.BASE_URL}`
-  : 'http://localhost:3001';
+import tailwindConfig from 'utils/tailwind.config';
+import { EmailSection } from '../components/emailSection';
+import { Heading } from '../components/heading';
+import { Logo } from '../components/logo';
 
 export default function WelcomeEmail() {
   return (
     <Html>
-      <Preview>Welcome</Preview>
-      <Tailwind>
-        <Body className='mx-auto my-auto font-sans'>
-          <Container className='mx-auto my-[40px] max-w-[600px] border-transparent'>
-            <Logo baseUrl={baseUrl} />
-            <Heading className='mx-0 my-[30px] p-0 text-center font-normal'>
-              Welcome to v1
+      <Preview>Welcome to our newsletter!</Preview>
+      <Tailwind config={tailwindConfig}>
+        <Body className='bg-background font-sans'>
+          <Container className='mx-auto my-10 max-w-lg rounded-xl border border-border bg-white p-6 shadow-sm'>
+            <Section className='mb-6 text-center'>
+              <Logo baseUrl='https://yourdomain.com/images' />
+            </Section>
+            <Heading as='h2' size='h2' className='mb-2'>
+              Welcome!
             </Heading>
-            <Section className='mb-4'>
-              Hi, I'm Pontus, one of the founders.
+            <EmailSection className='mt-4' variant='default' size='sm'>
+              <Text className='text-base text-muted-foreground'>
+                Thank you for signing up for our newsletter! From now on, you'll
+                receive exciting updates, useful tips, and exclusive offers
+                directly in your inbox.
+              </Text>
+              <Text className='mt-4 text-base text-muted-foreground'>
+                As a small welcome gift, you get <strong>10% off</strong> your
+                first order 🎉
+              </Text>
+              <Text className='mt-4 text-base text-muted-foreground'>
+                Follow us on our social channels and never miss an update.
+              </Text>
+            </EmailSection>
+            <Section className='mt-6 text-center'>
+              <Text className='text-muted-foreground text-sm'>
+                Your [Company Name] Team
+              </Text>
             </Section>
-            <Section className='mb-4'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              euismod, nisi vel consectetur interdum, nisl nunc egestas nunc,
-              vitae tincidunt nisl nunc euismod nunc. Sed euismod, nisi vel
-              consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl
-              nunc euismod nunc. Sed euismod, nisi vel consectetur interdum,
-              nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.
-            </Section>
-            <Section className='mb-4'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </Section>
-            <Section className='mb-8'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </Section>
-            <Section className='mb-6'>
-              <Link href={baseUrl}>
-                <Button className='bg-black p-4 text-center text-white'>
-                  Get started
-                </Button>
-              </Link>
-            </Section>
-            <Hr />
           </Container>
         </Body>
       </Tailwind>

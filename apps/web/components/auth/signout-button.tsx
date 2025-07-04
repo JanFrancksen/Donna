@@ -8,11 +8,11 @@ export function SignoutButton() {
   const router = useRouter();
   return (
     <Button
-      variant='outline'
       onClick={() => {
         authClient.signOut();
         router.push('/login');
       }}
+      variant='outline'
     >
       Sign Out
     </Button>

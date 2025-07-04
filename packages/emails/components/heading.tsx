@@ -1,6 +1,6 @@
 import { Heading as ReactEmailHeading } from '@react-email/components';
 import { cn } from '@repo/ui/lib/utils';
-import { type VariantProps, cva } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority';
 import type { ReactNode } from 'react';
 
 const headingVariants = cva('font-bold text-gray-800', {

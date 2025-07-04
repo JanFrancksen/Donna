@@ -1,15 +1,15 @@
 {
-	"name": "@repo/types",
-	"version": "0.0.0",
-	"exports": {
-		".": "./src/*"
-	},
-	"scripts": {
-		"clean": "rm -rf .turbo node_modules",
-		"db-types": "bunx supabase gen types typescript --project-id 'xqacqppokcrnqiruwgzp' --schema public > ./src/supabase-types.ts"
-	},
-	"devDependencies": {
-		"typescript": "catalog:",
-		"@repo/typescript-config": "workspace:*"
-	}
+  "name": "@repo/types",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/*"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "db-types": "bunx supabase gen types typescript --project-id 'xqacqppokcrnqiruwgzp' --schema public > ./src/supabase-types.ts"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "@repo/typescript-config": "workspace:*"
+  }
 }

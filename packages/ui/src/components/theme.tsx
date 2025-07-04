@@ -1,6 +1,7 @@
 'use client';
+
 import { CheckIcon, MoonIcon, SunIcon } from 'lucide-react';
-import { ThemeProvider, useTheme } from 'next-themes';
+import { useTheme } from 'next-themes';
 
 import { Button } from './button';
 import {
@@ -16,7 +17,7 @@ function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline' size='icon'>
+        <Button size='icon' variant='outline'>
           <SunIcon className='dark:-rotate-90 size-5 rotate-0 scale-100 transition-all dark:scale-0' />
           <MoonIcon className='absolute size-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
           <span className='sr-only'>Toggle theme</span>
@@ -40,4 +41,5 @@ function ThemeToggle() {
   );
 }
 
-export { ThemeProvider, ThemeToggle };
+export { ThemeProvider } from 'next-themes';
+export { ThemeToggle };

@@ -10,7 +10,7 @@ import {
   Text,
 } from '@react-email/components';
 import tailwindConfig from 'utils/tailwind.config';
-import { EmailSection } from '../components/emailSection';
+import { EmailSection } from '../components/email-section';
 import { Heading } from '../components/heading';
 import { Logo } from '../components/logo';
 
@@ -27,14 +27,14 @@ export default function ShippingNotificationEmail() {
             <Section className='mb-6 text-center'>
               <Logo baseUrl='https://yourdomain.com/images' />
             </Section>
-            <Heading as='h2' size='h2' className='mb-2'>
+            <Heading as='h2' className='mb-2' size='h2'>
               Your package is on the way!
             </Heading>
             <Text className='mb-6 text-center text-base text-muted-foreground'>
               Good news – your order has just been shipped and is on its way to
               you. 🎉
             </Text>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='text-gray-600 text-sm'>
                 Order number: <strong>#123456</strong>
               </Text>
@@ -47,14 +47,14 @@ export default function ShippingNotificationEmail() {
               <Text className='text-gray-600 text-sm'>
                 Tracking link:
                 <Link
-                  href='https://www.dhl.de/sendungsverfolgung'
                   className='text-blue-600 underline'
+                  href='https://www.dhl.de/sendungsverfolgung'
                 >
                   Track your shipment
                 </Link>
               </Text>
             </EmailSection>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='mb-2 font-semibold text-gray-800 text-lg'>
                 Shipping address
               </Text>
@@ -68,7 +68,7 @@ export default function ShippingNotificationEmail() {
                 Germany
               </Text>
             </EmailSection>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='text-base text-muted-foreground'>
                 You will receive another confirmation once your package has been
                 delivered. If you have any questions about your delivery, our

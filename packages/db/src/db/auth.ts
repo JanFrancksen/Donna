@@ -12,10 +12,10 @@ export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: 'pg',
     schema: {
-      user: user,
-      session: session,
-      account: account,
-      verification: verification,
+      user,
+      session,
+      account,
+      verification,
     },
   }),
   emailAndPassword: {
@@ -43,8 +43,7 @@ export const auth = betterAuth({
       // Incoming Webhooks handler will be installed at /polar/webhooks
       webhooks: {
         secret: process.env.POLAR_WEBHOOK_SECRET || '',
-        onPayload: (payload) => {
-          console.log(payload);
+        onPayload: (_payload) => {
           return Promise.resolve();
         },
       },

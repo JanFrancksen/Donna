@@ -1,32 +1,38 @@
 {
-	"[typescript]": {
-		"editor.defaultFormatter": "biomejs.biome"
-	},
-	"deno.enablePaths": ["supabase/functions"],
-	"deno.lint": true,
-	"deno.unstable": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll.biome": "always",
-		"source.organizeImports": "explicit"
-	},
-	"editor.defaultFormatter": "biomejs.biome",
-	"editor.formatOnSave": true,
-	"tailwindCSS.experimental.classRegex": [
-		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-		["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-	],
-	"tailwindCSS.experimental.configFile": "./tooling/tailwind/web.ts",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"typescript.preferences.autoImportFileExcludePatterns": [
-		"next/router.d.ts",
-		"next/dist/client/router.d.ts"
-	],
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"[mdx]": {
-		"editor.defaultFormatter": "unifiedjs.vscode-mdx",
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": "never",
-			"source.fixAll": "never"
-		}
-	}
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "deno.enablePaths": ["supabase/functions"],
+  "deno.lint": true,
+  "deno.unstable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.experimental.configFile": "./tooling/tailwind/web.ts",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "next/router.d.ts",
+    "next/dist/client/router.d.ts"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never",
+      "source.fixAll": "never"
+    }
+  },
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc][css][graphql]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.formatOnPaste": true,
+  "emmet.showExpandedAbbreviation": "never"
 }

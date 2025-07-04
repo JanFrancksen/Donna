@@ -1,3 +1,4 @@
+// biome-ignore lint/performance/noNamespaceImport: <this is needed for dotenv>
 import * as dotenv from 'dotenv';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Pool } from 'pg';

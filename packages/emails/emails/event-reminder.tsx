@@ -11,7 +11,7 @@ import {
 } from '@react-email/components';
 import tailwindConfig from 'utils/tailwind.config';
 import { EmailButton } from '../components/button';
-import { EmailSection } from '../components/emailSection';
+import { EmailSection } from '../components/email-section';
 import { Heading } from '../components/heading';
 import { Logo } from '../components/logo';
 
@@ -25,15 +25,15 @@ export const EventReminderEmail = () => (
           <Section className='text-center'>
             <Logo baseUrl='https://yourdomain.com/images' />
             <Img
-              src='https://placehold.co/560x200'
               alt='Webinar Banner'
               className='mx-auto mb-4 rounded-md'
-              width='560'
               height='200'
+              src='https://placehold.co/560x200'
+              width='560'
             />
           </Section>
 
-          <Heading as='h2' size='h2' className='mb-2'>
+          <Heading as='h2' className='mb-2' size='h2'>
             Your webinar starts soon!
           </Heading>
 
@@ -42,9 +42,9 @@ export const EventReminderEmail = () => (
           </Text>
 
           <EmailSection
-            variant='primary'
-            size='sm'
             className='mb-6 text-gray-800'
+            size='sm'
+            variant='primary'
           >
             <Text className='mb-1'>
               <strong>📅 Date:</strong> Tuesday, June 18, 2025
@@ -61,11 +61,11 @@ export const EventReminderEmail = () => (
           </EmailSection>
 
           <EmailButton
-            href='https://yourdomain.com/webinar-join'
-            variant='default'
-            size='lg'
             className='mt-2 mb-4 w-full'
+            href='https://yourdomain.com/webinar-join'
+            size='lg'
             style={{ backgroundColor: '#007291' }}
+            variant='default'
           >
             Join Now
           </EmailButton>

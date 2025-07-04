@@ -38,7 +38,7 @@ export default async function PlansPage() {
     items: Product[];
   }
 
-  const test: ProductList = {
+  const _test: ProductList = {
     items: [
       {
         createdAt: '2025-04-18T17:46:29.458Z',

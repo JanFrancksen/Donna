@@ -1,62 +1,72 @@
 {
-	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
-	"linter": {
-		"includes": [
-			"**",
-			"!**/node_modules",
-			"!**/.next",
-			"!**/packages/tsconfig",
-			"!**/.source"
-		],
-		"enabled": true,
-		"rules": {
-			"recommended": true,
-			"a11y": {
-				"noSvgWithoutTitle": "off"
-			},
-			"style": {
-				"noNonNullAssertion": "off",
-				"noParameterAssign": "error",
-				"useAsConstAssertion": "error",
-				"useDefaultParameterLast": "error",
-				"useEnumInitializers": "error",
-				"useSelfClosingElements": "error",
-				"useSingleVarDeclarator": "error",
-				"noUnusedTemplateLiteral": "error",
-				"useNumberNamespace": "error",
-				"noInferrableTypes": "error",
-				"noUselessElse": "error"
-			},
-			"correctness": {
-				"useExhaustiveDependencies": "off",
-				"noUnusedImports": { "level": "error" }
-			},
-			"nursery": {
-				"useSortedClasses": {
-					"level": "warn",
-					"fix": "safe",
-					"options": {
-						"attributes": ["classlist"],
-						"functions": ["clsx", "cva", "tw"]
-					}
-				}
-			}
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"indentStyle": "space",
-			"enabled": true,
-			"quoteStyle": "single",
-			"jsxQuoteStyle": "single",
-			"trailingCommas": "es5"
-		}
-	},
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true,
-		"defaultBranch": "main"
-	}
+  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/packages/tsconfig",
+      "!**/.source",
+      "!**/.source/**"
+    ],
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "noUnusedImports": {
+          "level": "error"
+        }
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {
+            "attributes": ["classlist"],
+            "functions": ["clsx", "cva", "tw"]
+          }
+        }
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "indentStyle": "space",
+      "enabled": true,
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "trailingCommas": "es5"
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "extends": ["ultracite"]
 }

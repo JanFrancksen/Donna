@@ -54,8 +54,8 @@ export function Pricing({
         <Label className='relative inline-flex cursor-pointer items-center'>
           <Switch
             checked={!isMonthly}
-            onCheckedChange={handleToggle}
             className='relative'
+            onCheckedChange={handleToggle}
           />
         </Label>
         <span className='ml-2 font-semibold'>
@@ -64,20 +64,9 @@ export function Pricing({
       </div>
 
       <div className='sm:2 grid grid-cols-1 gap-4 md:grid-cols-3'>
+        {/** biome-ignore lint/complexity/noExcessiveCognitiveComplexity: <explanation> */}
         {plans.map((plan, index) => (
           <motion.div
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            key={index}
-            initial={{ y: 50, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1.6,
-              type: 'spring',
-              stiffness: 100,
-              damping: 30,
-              delay: 0.4,
-              opacity: { duration: 0.5 },
-            }}
             className={cn(
               'relative rounded-2xl border-[1px] bg-background p-6 text-center lg:flex lg:flex-col lg:justify-center',
               plan.isPopular ? 'border-2 border-primary' : 'border-border',
@@ -89,6 +78,17 @@ export function Pricing({
               index === 0 && 'origin-right',
               index === 2 && 'origin-left'
             )}
+            initial={{ y: 50, opacity: 1 }}
+            key={plan.name}
+            transition={{
+              duration: 1.6,
+              type: 'spring',
+              stiffness: 100,
+              damping: 30,
+              delay: 0.4,
+              opacity: { duration: 0.5 },
+            }}
+            viewport={{ once: true }}
           >
             {plan.isPopular && (
               <div className='absolute top-0 right-0 flex items-center rounded-tr-xl rounded-bl-xl bg-primary px-2 py-0.5'>
@@ -105,14 +105,14 @@ export function Pricing({
               <div className='mt-6 flex items-center justify-center gap-x-2'>
                 <span className='font-bold text-5xl text-foreground tracking-tight'>
                   <AnimatedNumber
-                    value={
-                      isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)
-                    }
+                    className='font-variant-numeric: tabular-nums'
                     springOptions={{
                       bounce: 0,
                       duration: 1000,
                     }}
-                    className='font-variant-numeric: tabular-nums'
+                    value={
+                      isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)
+                    }
                   />
                 </span>
                 {plan.period !== 'Next 3 months' && (
@@ -127,9 +127,8 @@ export function Pricing({
               </p>
 
               <ul className='mt-5 flex flex-col gap-2'>
-                {plan.features.map((feature, idx) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                  <li key={idx} className='flex items-start gap-2'>
+                {plan.features.map((feature) => (
+                  <li className='flex items-start gap-2' key={feature}>
                     <Check className='mt-1 h-4 w-4 flex-shrink-0 text-primary' />
                     <span className='text-left'>{feature}</span>
                   </li>
@@ -139,7 +138,6 @@ export function Pricing({
               <hr className='my-4 w-full' />
 
               <Link
-                href={plan.href}
                 className={cn(
                   buttonVariants({
                     variant: 'outline',
@@ -150,6 +148,7 @@ export function Pricing({
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-background text-foreground'
                 )}
+                href={plan.href}
               >
                 {plan.buttonText}
               </Link>

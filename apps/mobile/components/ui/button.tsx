@@ -8,11 +8,11 @@ interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({ children, onPress }) => {
   return (
     <Pressable
-      style={styles.button}
-      onPress={onPress}
-      accessible={true}
-      accessibilityRole='button'
       accessibilityLabel={children}
+      accessibilityRole='button'
+      accessible={true}
+      onPress={onPress}
+      style={styles.button}
     >
       <Text style={styles.buttonText}>{children}</Text>
     </Pressable>

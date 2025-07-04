@@ -38,7 +38,7 @@ export async function signupAction({
     return {
       success: true,
     };
-  } catch (error) {
+  } catch (_error) {
     return {
       success: false,
       error: 'An unexpected error occurred',

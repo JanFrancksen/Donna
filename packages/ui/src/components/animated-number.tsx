@@ -1,8 +1,8 @@
 'use client';
 import { cn } from '@repo/ui/lib/utils';
 import {
-  type SpringOptions,
   motion,
+  type SpringOptions,
   useSpring,
   useTransform,
 } from 'motion/react';

@@ -1,17 +1,17 @@
 {
-	"name": "@repo/desktop",
-	"private": true,
-	"version": "0.0.0",
-	"scripts": {
-		"build": "tauri build",
-		"dev": "tauri dev",
-		"start": "start:dashboard",
-		"update": "bun update --ignore-scripts",
-		"update:latest": "bun update --latest --ignore-scripts"
-	},
-	"devDependencies": {
-		"@tauri-apps/cli": "2.5.0",
-		"@types/node": "^22.15.2",
-		"typescript": "catalog:"
-	}
+  "name": "@repo/desktop",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tauri build",
+    "dev": "tauri dev",
+    "start": "start:dashboard",
+    "update": "bun update --ignore-scripts",
+    "update:latest": "bun update --latest --ignore-scripts"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.5.0",
+    "@types/node": "^22.15.2",
+    "typescript": "catalog:"
+  }
 }

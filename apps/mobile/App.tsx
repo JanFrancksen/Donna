@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/style/useFilenamingConvention: <explanation> */
+/** biome-ignore-all lint/suspicious/noEmptyBlockStatements: <explanation> */
 import { StatusBar } from 'expo-status-bar';
 import { Alert, StyleSheet, Text, View } from 'react-native';
 import { Button } from './components/ui/button';
@@ -7,10 +9,10 @@ export default function App() {
     Alert.alert('Button pressed', 'My Alert Msg', [
       {
         text: 'Cancel',
-        onPress: () => console.log('Cancel Pressed'),
+        onPress: () => {},
         style: 'cancel',
       },
-      { text: 'OK', onPress: () => console.log('OK Pressed') },
+      { text: 'OK', onPress: () => {} },
     ]);
 
   return (

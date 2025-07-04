@@ -10,7 +10,7 @@ import {
 } from '@react-email/components';
 import tailwindConfig from 'utils/tailwind.config';
 import { EmailButton } from '../components/button';
-import { EmailSection } from '../components/emailSection';
+import { EmailSection } from '../components/email-section';
 import { Heading } from '../components/heading';
 import { Logo } from '../components/logo';
 
@@ -25,7 +25,7 @@ export const ReactivationEmail = () => (
             <Logo baseUrl='https://yourdomain.com/images' />
           </Section>
 
-          <Heading as='h2' size='h2' className='mb-2'>
+          <Heading as='h2' className='mb-2' size='h2'>
             We miss you! 👋
           </Heading>
 
@@ -34,7 +34,7 @@ export const ReactivationEmail = () => (
             see you back!
           </Text>
 
-          <EmailSection variant='primary' size='sm' className='mb-6'>
+          <EmailSection className='mb-6' size='sm' variant='primary'>
             <Text className='text-gray-800'>
               As a thank you, enjoy a <strong>10% welcome-back discount</strong>{' '}
               on your next order.
@@ -42,11 +42,11 @@ export const ReactivationEmail = () => (
           </EmailSection>
 
           <EmailButton
-            href='https://yourdomain.com/reactivate'
-            variant='default'
-            size='lg'
             className='mt-2 mb-4 w-full'
+            href='https://yourdomain.com/reactivate'
+            size='lg'
             style={{ backgroundColor: '#007291' }}
+            variant='default'
           >
             Reactivate Now
           </EmailButton>

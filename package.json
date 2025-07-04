@@ -1,51 +1,55 @@
 {
-	"name": "donna",
-	"private": true,
-	"workspaces": {
-		"packages": [
-			"apps/*",
-			"packages/*",
-			"tooling/*"
-		],
-		"catalog": {
-			"react": "^19.1.0",
-			"zod": "4.0.0-beta.1",
-			"typescript": "^5.8.3"
-		}
-	},
-	"packageManager": "bun@1.2.14",
-	"scripts": {
-		"build": "turbo build",
-		"clean": "git clean -xdf node_modules",
-		"clean:workspaces": "turbo clean",
-		"dev": "turbo dev --parallel",
-		"dev:web": "turbo dev --filter=@repo/web",
-		"dev:web-new": "docker-compose up -d && docker-compose exec database pg_isready -U username -d default_database && bun db:push & bun dev:web",
-		"dev:jobs": "turbo jobs --filter=@repo/jobs",
-		"dev:app": "turbo dev --filter=@repo/app",
-		"db:studio": "bun --filter=@repo/db db:studio",
-		"start:web": "turbo start --filter=@repo/web",
-		"start:app": "turbo start --filter=@repo/app",
-		"test": "turbo test --parallel",
-		"format": "biome format --write .",
-		"lint": "turbo lint && bun lint:repo",
-		"lint:repo": "bunx sherif@latest",
-		"lint:repo:fix": "bunx sherif@latest --fix",
-		"typecheck": "turbo typecheck",
-		"ui-add": "turbo run ui-add",
-		"db:push": "turbo run db:push",
-		"knip": "knip"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.0.5",
-		"@commitlint/cli": "^19.8.0",
-		"@commitlint/config-conventional": "^19.8.0",
-		"@t3-oss/env-nextjs": "^0.13.0",
-		"@turbo/gen": "^2.5.2",
-		"lefthook": "^1.11.11",
-		"turbo": "^2.5.2"
-	},
-	"peerDependencies": {
-		"typescript": "catalog:"
-	}
+  "name": "donna",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*",
+      "tooling/*"
+    ],
+    "catalog": {
+      "react": "^19.1.0",
+      "zod": "^3.25.0",
+      "typescript": "^5.8.3"
+    }
+  },
+  "packageManager": "bun@1.2.14",
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "dev": "turbo dev --parallel",
+    "dev:web": "turbo dev --filter=@repo/web",
+    "dev:web-new": "docker-compose up -d && docker-compose exec database pg_isready -U username -d default_database && bun db:push & bun dev:web",
+    "dev:docs": "turbo dev --filter=@repo/docs",
+    "dev:jobs": "turbo jobs --filter=@repo/jobs",
+    "dev:email": "turbo dev --filter=@repo/email",
+    "dev:app": "turbo dev --filter=@repo/app",
+    "db:studio": "bun --filter=@repo/db db:studio",
+    "start:web": "turbo start --filter=@repo/web",
+    "start:app": "turbo start --filter=@repo/app",
+    "test": "turbo test --parallel",
+    "format": "biome format --write .",
+    "lint": "turbo lint && bun lint:repo",
+    "lint:repo": "bunx sherif@latest",
+    "lint:repo:fix": "bunx sherif@latest --fix",
+    "typecheck": "turbo typecheck",
+    "ui-add": "turbo run ui-add",
+    "db:push": "turbo run db:push",
+    "knip": "knip"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "@turbo/gen": "^2.5.4",
+    "husky": "^9.1.7",
+    "lefthook": "^1.11.16",
+    "turbo": "^2.5.4",
+    "ultracite": "5.0.20"
+  },
+  "peerDependencies": {
+    "typescript": "catalog:"
+  }
 }

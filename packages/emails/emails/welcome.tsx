@@ -8,7 +8,7 @@ import {
   Text,
 } from '@react-email/components';
 import tailwindConfig from 'utils/tailwind.config';
-import { EmailSection } from '../components/emailSection';
+import { EmailSection } from '../components/email-section';
 import { Heading } from '../components/heading';
 import { Logo } from '../components/logo';
 
@@ -22,10 +22,10 @@ export default function WelcomeEmail() {
             <Section className='mb-6 text-center'>
               <Logo baseUrl='https://yourdomain.com/images' />
             </Section>
-            <Heading as='h2' size='h2' className='mb-2'>
+            <Heading as='h2' className='mb-2' size='h2'>
               Welcome!
             </Heading>
-            <EmailSection className='mt-4' variant='default' size='sm'>
+            <EmailSection className='mt-4' size='sm' variant='default'>
               <Text className='text-base text-muted-foreground'>
                 Thank you for signing up for our newsletter! From now on, you'll
                 receive exciting updates, useful tips, and exclusive offers

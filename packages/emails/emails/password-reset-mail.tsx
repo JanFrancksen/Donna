@@ -26,7 +26,7 @@ export const PasswordResetEmail = () => (
             <Logo baseUrl='https://yourdomain.com/images' />
           </Section>
 
-          <Heading as='h2' size='h2' className='mb-2'>
+          <Heading as='h2' className='mb-2' size='h2'>
             Reset your password
           </Heading>
 
@@ -36,11 +36,11 @@ export const PasswordResetEmail = () => (
           </Text>
 
           <EmailButton
-            href='https://yourdomain.com/reset-password?token=abc123'
-            variant='default'
-            size='lg'
             className='mt-2 mb-4 w-full'
+            href='https://yourdomain.com/reset-password?token=abc123'
+            size='lg'
             style={{ backgroundColor: '#007291' }}
+            variant='default'
           >
             Reset Password
           </EmailButton>
@@ -52,7 +52,7 @@ export const PasswordResetEmail = () => (
 
           <Text className='mt-8 text-center text-muted-foreground text-sm'>
             Questions? Contact us at{' '}
-            <a href='mailto:support@yourdomain.com' className='underline'>
+            <a className='underline' href='mailto:support@yourdomain.com'>
               support@yourdomain.com
             </a>
             .

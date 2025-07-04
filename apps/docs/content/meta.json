@@ -1,10 +1,10 @@
 {
-	"pages": [
-		"---Get started---",
-		"index",
-		"quick-start",
-		"---Features---",
-		"...(features)"
-	],
-	"root": true
+  "pages": [
+    "---Get started---",
+    "index",
+    "quick-start",
+    "---Features---",
+    "...(features)"
+  ],
+  "root": true
 }

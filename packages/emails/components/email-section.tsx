@@ -1,4 +1,3 @@
-// components/emailSection.ts
 import { Section } from '@react-email/components';
 import { cva } from 'class-variance-authority';
 

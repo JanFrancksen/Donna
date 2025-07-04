@@ -1,45 +1,45 @@
 {
-	"name": "@repo/db",
-	"version": "0.0.1",
-	"main": "index.ts",
-	"type": "module",
-	"private": true,
-	"types": "index.ts",
-	"scripts": {
-		"clean": "rm -rf .turbo node_modules",
-		"format": "biome format --write",
-		"lint": "biome check .",
-		"typecheck": "tsc --noEmit",
-		"gen:schema": "bun with-env bunx @better-auth/cli generate --config ./src/db/auth.ts --output ./src/db/schema/auth-schema.ts --y",
-		"db:generate": "bun with-env drizzle-kit generate",
-		"db:push": "bun with-env drizzle-kit push",
-		"db:pull": "bun with-env drizzle-kit pull",
-		"db:push-force": "bun with-env drizzle-kit push --force",
-		"db:studio": "bun with-env drizzle-kit studio",
-		"with-env": "dotenv -e ../../.env --"
-	},
-	"dependencies": {
-		"@polar-sh/better-auth": "^0.1.1",
-		"@polar-sh/sdk": "^0.32.11",
-		"bcrypt-ts": "^6.0.0",
-		"dotenv": "^16.5.0",
-		"drizzle-orm": "^0.43.1",
-		"pg": "^8.15.6"
-	},
-	"devDependencies": {
-		"@types/pg": "^8.11.14",
-		"drizzle-kit": "^0.31.0",
-		"tsx": "^4.19.3",
-		"dotenv-cli": "^8.0.0",
-		"better-auth": "^1.2.7",
-		"typescript": "catalog:"
-	},
-	"exports": {
-		".": "./src/index.ts",
-		"./schema/orders": "./src/db/schema/orders.ts",
-		"./queries": "./src/db/queries/queries.ts",
-		"./auth": "./src/db/auth.ts",
-		"./auth-client": "./src/db/auth-client.ts",
-		"./polar-client": "./src/db/polar-client.ts"
-	}
+  "name": "@repo/db",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "type": "module",
+  "private": true,
+  "types": "index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "format": "biome format --write",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "gen:schema": "bun with-env bunx @better-auth/cli generate --config ./src/db/auth.ts --output ./src/db/schema/auth-schema.ts --y",
+    "db:generate": "bun with-env drizzle-kit generate",
+    "db:push": "bun with-env drizzle-kit push",
+    "db:pull": "bun with-env drizzle-kit pull",
+    "db:push-force": "bun with-env drizzle-kit push --force",
+    "db:studio": "bun with-env drizzle-kit studio",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@polar-sh/better-auth": "^0.1.1",
+    "@polar-sh/sdk": "^0.32.11",
+    "bcrypt-ts": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "pg": "^8.15.6"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.14",
+    "drizzle-kit": "^0.31.0",
+    "tsx": "^4.19.3",
+    "dotenv-cli": "^8.0.0",
+    "better-auth": "^1.2.7",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema/orders": "./src/db/schema/orders.ts",
+    "./queries": "./src/db/queries/queries.ts",
+    "./auth": "./src/db/auth.ts",
+    "./auth-client": "./src/db/auth-client.ts",
+    "./polar-client": "./src/db/polar-client.ts"
+  }
 }

@@ -26,7 +26,7 @@ export const FeedbackRequestEmail = () => (
             <Logo baseUrl='https://yourdomain.com/images' />
           </Section>
 
-          <Heading as='h2' size='h2' className='mb-2'>
+          <Heading as='h2' className='mb-2' size='h2'>
             Your opinion matters!
           </Heading>
 
@@ -36,11 +36,11 @@ export const FeedbackRequestEmail = () => (
           </Text>
 
           <EmailButton
-            href='https://yourdomain.com/feedback?ref=email'
-            variant='default'
-            size='lg'
             className='mt-2 mb-4 w-full'
+            href='https://yourdomain.com/feedback?ref=email'
+            size='lg'
             style={{ backgroundColor: '#007291' }}
+            variant='default'
           >
             Give Feedback Now
           </EmailButton>

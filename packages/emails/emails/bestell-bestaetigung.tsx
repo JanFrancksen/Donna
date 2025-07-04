@@ -8,7 +8,7 @@ import {
   Text,
 } from '@react-email/components';
 import tailwindConfig from 'utils/tailwind.config';
-import { EmailSection } from '../components/emailSection';
+import { EmailSection } from '../components/email-section';
 import { Heading } from '../components/heading';
 import { Logo } from '../components/logo';
 
@@ -22,13 +22,13 @@ export default function OrderConfirmationEmail() {
             <Section className='mb-6 text-center'>
               <Logo baseUrl='https://yourdomain.com/images' />
             </Section>
-            <Heading as='h2' size='h2' className='mb-2'>
+            <Heading as='h2' className='mb-2' size='h2'>
               Thank you for your order!
             </Heading>
             <Text className='mb-6 text-center text-base text-muted-foreground'>
               Your order was placed successfully. Here is a summary:
             </Text>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='text-gray-600 text-sm'>
                 Order number: <strong>#123456</strong>
               </Text>
@@ -36,7 +36,7 @@ export default function OrderConfirmationEmail() {
                 Order date: <strong>2025-06-02</strong>
               </Text>
             </EmailSection>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='mb-2 font-semibold text-gray-800 text-lg'>
                 Ordered items
               </Text>
@@ -45,7 +45,7 @@ export default function OrderConfirmationEmail() {
                 <li>Sustainable Water Bottle – 1 pc – €19.90</li>
               </ul>
             </EmailSection>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='text-gray-700 text-sm'>
                 <strong>Subtotal:</strong> €29.89
                 <br />
@@ -55,7 +55,7 @@ export default function OrderConfirmationEmail() {
                 <span className='font-semibold text-green-600'>€29.89</span>
               </Text>
             </EmailSection>
-            <EmailSection className='mb-6' variant='default' size='sm'>
+            <EmailSection className='mb-6' size='sm' variant='default'>
               <Text className='text-base text-muted-foreground'>
                 You will receive another email once your package is on its way.
                 If you have any questions, you can contact our support team at

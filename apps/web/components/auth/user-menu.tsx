@@ -2,15 +2,6 @@
 
 import { authClient } from '@repo/db/auth-client';
 import {
-  BoltIcon,
-  BookOpenIcon,
-  ChevronDownIcon,
-  LogOutIcon,
-  UserPenIcon,
-} from 'lucide-react';
-import { useRouter } from 'next/navigation';
-
-import {
   Avatar,
   AvatarFallback,
   AvatarImage,
@@ -25,6 +16,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@repo/ui/components/dropdown-menu';
+import {
+  BoltIcon,
+  BookOpenIcon,
+  ChevronDownIcon,
+  LogOutIcon,
+  UserPenIcon,
+} from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export function UserMenu() {
   const { data: session } = authClient.useSession();
@@ -35,17 +34,17 @@ export function UserMenu() {
       <DropdownMenuTrigger asChild>
         <Button variant='ghost'>
           <Avatar className='size-8'>
-            <AvatarImage src={session?.user?.image || ''} alt='Profile image' />
+            <AvatarImage alt='Profile image' src={session?.user?.image || ''} />
             <AvatarFallback>{session?.user?.name?.charAt(0)}</AvatarFallback>
           </Avatar>
           <ChevronDownIcon
-            size={16}
-            className='opacity-60'
             aria-hidden='true'
+            className='opacity-60'
+            size={16}
           />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='max-w-64' align='end'>
+      <DropdownMenuContent align='end' className='max-w-64'>
         <DropdownMenuLabel className='flex min-w-0 flex-col'>
           <span className='truncate font-medium text-foreground text-sm'>
             {session?.user?.name}
@@ -57,18 +56,18 @@ export function UserMenu() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <BoltIcon size={16} className='opacity-60' aria-hidden='true' />
+            <BoltIcon aria-hidden='true' className='opacity-60' size={16} />
             <span>Settings</span>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <BookOpenIcon size={16} className='opacity-60' aria-hidden='true' />
+            <BookOpenIcon aria-hidden='true' className='opacity-60' size={16} />
             <span>Help</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <UserPenIcon size={16} className='opacity-60' aria-hidden='true' />
+            <UserPenIcon aria-hidden='true' className='opacity-60' size={16} />
             <span>Edit Profile</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
@@ -79,7 +78,7 @@ export function UserMenu() {
             router.push('/login');
           }}
         >
-          <LogOutIcon size={16} className='opacity-60' aria-hidden='true' />
+          <LogOutIcon aria-hidden='true' className='opacity-60' size={16} />
           <span>Logout</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

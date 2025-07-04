@@ -7,7 +7,7 @@ export default function AuthLayout({
 }) {
   return (
     <div className='my-12 flex min-h-screen flex-col items-center justify-center gap-12'>
-      <Image src='/onyxsoft_logo.png' alt='logo' width={260} height={38} />
+      <Image alt='logo' height={38} src='/onyxsoft_logo.png' width={260} />
       {children}
     </div>
   );

@@ -1,23 +1,23 @@
 {
-	"name": "@repo/email",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"clean": "rm -rf .turbo node_modules",
-		"lint": "biome check .",
-		"format": "biome format --write .",
-		"typecheck": "tsc --noEmit",
-		"dev": "email dev -p 3003",
-		"email:dev": "email dev -p 3003",
-		"build": "email build",
-		"start": "email start",
-		"export": "email export"
-	},
-	"dependencies": {
-		"@react-email/components": "^0.0.36",
-		"@react-email/tailwind": "^1.0.4"
-	},
-	"devDependencies": {
-		"react-email": "^4.0.7"
-	}
+  "name": "@repo/email",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "dev": "email dev -p 3003",
+    "email:dev": "email dev -p 3003",
+    "build": "email build",
+    "start": "email start",
+    "export": "email export"
+  },
+  "dependencies": {
+    "@react-email/components": "^0.0.36",
+    "@react-email/tailwind": "^1.0.4"
+  },
+  "devDependencies": {
+    "react-email": "^4.0.7"
+  }
 }

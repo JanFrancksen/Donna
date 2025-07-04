@@ -1,27 +1,30 @@
 {
-	"name": "@repo/posthog",
-	"version": "0.1.0",
-	"private": true,
-	"type": "module",
-	"exports": {
-		"./PostHogPageView": "./src/PostHogPageView.tsx",
-		"./PostHogProvider": "./src/PostHogProvider.tsx",
-		"./*": ["./src/*.tsx", "./src/*.ts"]
-	},
-	"license": "MIT",
-	"scripts": {
-		"clean": "git clean -xdf .next .turbo node_modules",
-		"typecheck": "tsc --noEmit",
-		"with-env": "dotenv -e ../../.env --"
-	},
-	"dependencies": {
-		"posthog-js": "^1.164.3",
-		"react": "catalog:",
-		"@t3-oss/env-core": "^0.11.1"
-	},
-	"devDependencies": {
-		"@repo/typescript-config": "workspace:*",
-		"dotenv-cli": "^7.4.2",
-		"typescript": "catalog:"
-	}
+  "name": "@repo/posthog",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./posthog-auth-wrapper": "./src/posthog-auth-wrapper.tsx",
+    "./posthog-provider": "./src/posthog-provider.tsx",
+    "./*": [
+      "./src/*.tsx",
+      "./src/*.ts"
+    ]
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "git clean -xdf .next .turbo node_modules",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "posthog-js": "^1.164.3",
+    "react": "catalog:",
+    "@t3-oss/env-core": "^0.11.1"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "dotenv-cli": "^7.4.2",
+    "typescript": "catalog:"
+  }
 }

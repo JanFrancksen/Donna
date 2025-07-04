@@ -1,12 +1,12 @@
 {
-	"extends": "@repo/typescript-config/internal-package.json",
-	"compilerOptions": {
-		"rootDir": ".",
-		"jsx": "preserve",
-		"paths": {
-			"@repo/ui/*": ["./src/*"]
-		}
-	},
-	"include": ["."],
-	"exclude": ["node_modules", "dist"]
+  "extends": "@repo/typescript-config/internal-package.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "jsx": "preserve",
+    "paths": {
+      "@repo/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
 }

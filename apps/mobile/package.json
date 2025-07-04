@@ -14,14 +14,14 @@
     "expo-device": "~7.0.3",
     "expo-notifications": "~0.29.14",
     "expo-status-bar": "~2.0.1",
-    "react": "18.3.1",
+    "react": "19.1.0",
     "react-native": "0.76.9",
     "react-native-reanimated": "3.16.2",
     "react-native-safe-area-context": "4.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
-    "@types/react": "~18.3.12",
+    "@types/react": "~19.1.8",
     "typescript": "catalog:"
   },
   "private": true

@@ -20,7 +20,7 @@
   "dependencies": {
     "posthog-js": "^1.164.3",
     "react": "catalog:",
-    "@t3-oss/env-core": "^0.11.1"
+    "@t3-oss/env-core": "^0.13.8"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

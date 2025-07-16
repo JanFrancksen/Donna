@@ -43,10 +43,10 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@t3-oss/env-nextjs": "^0.13.8",
-    "@turbo/gen": "^2.5.4",
+    "@turbo/gen": "^2.5.5",
     "husky": "^9.1.7",
     "lefthook": "^1.11.16",
-    "turbo": "^2.5.4",
+    "turbo": "^2.5.5",
     "ultracite": "5.0.20"
   },
   "peerDependencies": {

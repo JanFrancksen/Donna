@@ -39,7 +39,7 @@
     "knip": "knip"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.5",
+    "@biomejs/biome": "2.1.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@t3-oss/env-nextjs": "^0.13.8",

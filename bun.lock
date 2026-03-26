@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "donna",
@@ -219,7 +220,7 @@
       "name": "@repo/posthog",
       "version": "0.1.0",
       "dependencies": {
-        "@t3-oss/env-core": "^0.11.1",
+        "@t3-oss/env-core": "^0.13.11",
         "posthog-js": "^1.164.3",
         "react": "catalog:",
       },
@@ -1180,7 +1181,7 @@
 
     "@swc/helpers": ["@swc/helpers@0.5.15", "", { "dependencies": { "tslib": "^2.8.0" } }, "sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g=="],
 
-    "@t3-oss/env-core": ["@t3-oss/env-core@0.11.1", "", { "peerDependencies": { "typescript": ">=5.0.0", "zod": "^3.0.0" }, "optionalPeers": ["typescript"] }, "sha512-MaxOwEoG1ntCFoKJsS7nqwgcxLW1SJw238AJwfJeaz3P/8GtkxXZsPPolsz1AdYvUTbe3XvqZ/VCdfjt+3zmKw=="],
+    "@t3-oss/env-core": ["@t3-oss/env-core@0.13.11", "", { "peerDependencies": { "arktype": "^2.1.0", "typescript": ">=5.0.0", "valibot": "^1.0.0-beta.7 || ^1.0.0", "zod": "^3.24.0 || ^4.0.0" }, "optionalPeers": ["arktype", "typescript", "valibot", "zod"] }, "sha512-sM7GYY+KL7H/Hl0BE0inWfk3nRHZOLhmVn7sHGxaZt9FAR6KqREXAE+6TqKfiavfXmpRxO/OZ2QgKRd+oiBYRQ=="],
 
     "@t3-oss/env-nextjs": ["@t3-oss/env-nextjs@0.13.8", "", { "dependencies": { "@t3-oss/env-core": "0.13.8" }, "peerDependencies": { "arktype": "^2.1.0", "typescript": ">=5.0.0", "valibot": "^1.0.0-beta.7 || ^1.0.0", "zod": "^3.24.0 || ^4.0.0-beta.0" }, "optionalPeers": ["arktype", "typescript", "valibot", "zod"] }, "sha512-QmTLnsdQJ8BiQad2W2nvV6oUpH4oMZMqnFEjhVpzU0h3sI9hn8zb8crjWJ1Amq453mGZs6A4v4ihIeBFDOrLeQ=="],
 

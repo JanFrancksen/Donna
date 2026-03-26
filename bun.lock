@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "donna",
@@ -225,7 +226,7 @@
       },
       "devDependencies": {
         "@repo/typescript-config": "workspace:*",
-        "dotenv-cli": "^7.4.2",
+        "dotenv-cli": "^7.4.4",
         "typescript": "catalog:",
       },
     },
